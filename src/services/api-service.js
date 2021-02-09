@@ -1,3 +1,5 @@
+//tu obsługuje stan database czyli db.json
+
 
 const url = 'http://localhost:3000';
 
