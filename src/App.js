@@ -15,13 +15,22 @@ import {Home, Notes, AddNot, Notifications} from './components/Nav'
 
 const App = () => {
     const [dataset, setDataset] = useState([])
-
+    const [currentTime, setCurrentTime] = useState('')
+    // console.log(currentTime);
     useEffect(() => {
         fetch('http://localhost:3000/notes')
             .then(r => r.json())
             .then(data => {
                 setDataset(data)
             })
+
+        const intervalId = setInterval(() => {
+            setCurrentTime(new Date().getTime())
+        },2000)//co minutę
+
+        return () => {
+            clearInterval(intervalId)
+        }
     }, [])
 
 
@@ -29,75 +38,61 @@ const App = () => {
         setDataset(prevState => [...prevState, data])
     }
 
+//wyświetla czas i ID każdego elementu db.json
+//     dataset.map((data) => (
+//         console.log(`${data.time} ${data.id}`)
+//     ))
 
-    dataset.map((data) => (
-        console.log(`${data.time} ${data.id}`)
-    ))
+    const indexSatisfy = [];
+    for (let i = 0; i < dataset.length; i++) {
+        if (dataset[i].time >= currentTime) {
+            indexSatisfy.push(i)
+        }
+    }
+    console.log(indexSatisfy);
 
 
+    return (
+        <HashRouter>
+            <ul style={{display: "flex", justifyContent: "space-around"}}>
+                <li>
+                    <Link to={"/home"}>Strona główna</Link>
+                </li>
+                <li>
+                    <Link to={"/notes"}>Wszystkie notatki</Link>
+                </li>
+                <li>
+                    <Link to={"/addNot"}>Dodaj notatkę</Link>
+                </li>
+                <li>
+                    <Link to={"/notifications"}>Powtórka</Link>
+                </li>
+            </ul>
+            <Switch>
+                <Route exact path={"/home"}>
+                    <Home tim={"Strona główna"}/>
+                </Route>
 
+                <Route exact path={"/notes"}>
+                    <Notes tim={"Wszystkie notatki:"}/>
+                </Route>
 
-  return(
-      <HashRouter>
-          <ul style={{display: "flex", justifyContent: "space-around"}}>
-              <li>
-                  <Link to={"/home"}>Strona główna</Link>
-              </li>
-              <li>
-                  <Link to={"/notes"}>Wszystkie notatki</Link>
-              </li>
-              <li>
-                  <Link to={"/addNot"}>Dodaj notatkę</Link>
-              </li>
-              <li>
-                  <Link to={"/notifications"}>Powtórka</Link>
-              </li>
-          </ul>
-          <Switch>
-              <Route exact path={"/home"}>
-                  <Home tim={"Strona główna"}/>
-              </Route>
+                <Route exact path={"/addNot"}>
+                    <AddNot onAddDate={AddDate} tim={"Dodaj notatkę:"}/>
+                </Route>
 
-              <Route exact path={"/notes"}>
-                  <Notes tim={"Wszystkie notatki:"}/>
-              </Route>
-
-              <Route exact path={"/addNot"}>
-                  <AddNot onAddDate={AddDate} tim={"Dodaj notatkę:"}/>
-              </Route>
-
-              <Route exact path={"/notifications"}>
-                  <Notifications tim={"Powtórka"}/>
-              </Route>
-          </Switch>
-      </HashRouter>
-  )
+                <Route exact path={"/notifications"}>
+                    <Notifications tim={"Powtórka"}/>
+                </Route>
+            </Switch>
+        </HashRouter>
+    )
 }
 
 export default App;
 //app jest odpalony w pliku index.js
 //a w tym pliku muszę z niego skorzystać :)
 //dlatego jest importowany
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //DAREK:

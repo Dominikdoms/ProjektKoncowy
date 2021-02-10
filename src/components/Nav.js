@@ -39,7 +39,7 @@ const [notes, setNotes] = useState([])
             <h1>{tim}</h1>
             <ul>{notes.map(notes => (
                 <>
-                    <li style={{paddingTop: 20}} key={notes.id + 5}>{notes.data}</li>
+                    <li style={{paddingTop: 20}} key={notes.id + 5}>{notes.hour}</li>
                 <li key={notes.id + 4}>
                     {notes.description}
                 </li>
@@ -78,7 +78,7 @@ export const AddNot = ({onAddDate}, {tim}) => {
             const newNotes = {
                 description,
                 notes,
-                data: new Date().toLocaleTimeString(),
+                hour: new Date().toLocaleTimeString(),
                 time: new Date().getTime()
             }
 
