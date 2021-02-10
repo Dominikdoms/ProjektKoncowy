@@ -40,14 +40,15 @@ const [notes, setNotes] = useState([])
             <h1>{tim}</h1>
             <ul>{notes.map(notes => (
                 <>
-                <li style={{paddingTop: 20}}
-                    key={notes.id}>
+                    <li style={{paddingTop: 20}} key={notes.id + 5}>{notes.data}</li>
+                <li key={notes.id + 4}>
                     {notes.description}
                 </li>
-                <li key={notes.id}>
+
+                <li key={notes.id + 3}>
                     {notes.notes}
                 </li>
-                    <button key={notes.id} onClick={() => deleteNotes(notes.id)}>Usuń</button>
+                    <button key={notes.id + 2} onClick={() => deleteNotes(notes.id)}>Usuń</button>
                 </>
             ))}</ul>
         </>
@@ -63,15 +64,18 @@ export const AddNot = ({tim}) => {
 
     const [description, setDescription] = useState('')
     const [notes, setNotes] = useState('')
+    const [data, setData] = useState('')
+    const [time, setTime] = useState('')
     const [error, setError] = useState("")
-    console.log(description)
-    console.log(notes);
-
+    // console.log(description)
+    // console.log(notes);
+    console.log(data);
 
     const addNotes = (notes) => {
         // setNot(prevState => [...prevState, notes])
     }
 
+    // console.log(time);
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -85,7 +89,8 @@ export const AddNot = ({tim}) => {
 
             const newNotes = {
                 description,
-                notes
+                notes,
+                data
             }
 
             if (newError.length === 0) {
@@ -109,6 +114,9 @@ export const AddNot = ({tim}) => {
         }
     }
     useEffect(() => {
+        setData(new Date().toLocaleTimeString())
+        setTime(new Date().getTime())
+
         fetch('http://localhost:3000/notes')
             .then(r => r.json())
             .then(data => {
