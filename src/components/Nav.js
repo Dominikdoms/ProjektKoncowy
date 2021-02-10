@@ -15,13 +15,12 @@ export const Home = ({tim}) => {
 
 export const Notes = ({tim}) => {
 const [notes, setNotes] = useState([])
-    // console.log(notes)
+
     useEffect(() => {
         fetch('http://localhost:3000/notes')
             .then(r => r.json())
             .then(data => {
                 setNotes(data)
-                // console.log(data)
             })
     }, [])
 
@@ -59,20 +58,11 @@ const [notes, setNotes] = useState([])
 //--------------------------
 //--------ADD NOTES---------
 //--------------------------
-export const AddNot = ({tim}) => {
-    // const [not, setNot] = useState([])
+export const AddNot = ({onAddDate}, {tim}) => {
 
     const [description, setDescription] = useState('')
     const [notes, setNotes] = useState('')
-    // const [data, setData] = useState('')
-    // const [time, setTime] = useState('')
     const [error, setError] = useState("")
-    // console.log(time)
-
-
-    // const addNotes = (notes) => {
-        // setNot(prevState => [...prevState, notes])
-    // }
 
 
     const handleSubmit = (event) => {
@@ -101,26 +91,18 @@ export const AddNot = ({tim}) => {
                     }
                 })
                     .then((r) => r.json())
-                    .then((notes) => {
-                        // if (typeof addNotes === "function") {
-                        //     addNotes(notes)
-                        // }
+                    .then((data) => {
+                        if (typeof onAddDate === 'function') {
+                            onAddDate(data)
+                        }
                     })
-
             }
             setNotes("")
             setDescription("")
         }
     }
-    useEffect(() => {
-        // setData(new Date().toLocaleTimeString())
 
-        fetch('http://localhost:3000/notes')
-            .then(r => r.json())
-            .then(data => {
-                // console.log(data)
-            })
-    },[])
+
 
     return (
         <>

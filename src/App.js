@@ -24,9 +24,17 @@ const App = () => {
             })
     }, [])
 
+
+    const AddDate = (data) => {
+        setDataset(prevState => [...prevState, data])
+    }
+
+
     dataset.map((data) => (
         console.log(`${data.time} ${data.id}`)
     ))
+
+
 
 
   return(
@@ -55,7 +63,7 @@ const App = () => {
               </Route>
 
               <Route exact path={"/addNot"}>
-                  <AddNot tim={"Dodaj notatkę:"}/>
+                  <AddNot onAddDate={AddDate} tim={"Dodaj notatkę:"}/>
               </Route>
 
               <Route exact path={"/notifications"}>
