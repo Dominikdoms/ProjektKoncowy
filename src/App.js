@@ -14,6 +14,21 @@ import {Home, Notes, AddNot, Notifications} from './components/Nav'
 
 
 const App = () => {
+    const [dataset, setDataset] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:3000/notes')
+            .then(r => r.json())
+            .then(data => {
+                setDataset(data)
+            })
+    }, [])
+
+    dataset.map((data) => (
+        console.log(`${data.time} ${data.id}`)
+    ))
+
+
   return(
       <HashRouter>
           <ul style={{display: "flex", justifyContent: "space-around"}}>

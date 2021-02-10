@@ -15,7 +15,7 @@ export const Home = ({tim}) => {
 
 export const Notes = ({tim}) => {
 const [notes, setNotes] = useState([])
-    console.log(notes)
+    // console.log(notes)
     useEffect(() => {
         fetch('http://localhost:3000/notes')
             .then(r => r.json())
@@ -64,18 +64,16 @@ export const AddNot = ({tim}) => {
 
     const [description, setDescription] = useState('')
     const [notes, setNotes] = useState('')
-    const [data, setData] = useState('')
-    const [time, setTime] = useState('')
+    // const [data, setData] = useState('')
+    // const [time, setTime] = useState('')
     const [error, setError] = useState("")
-    // console.log(description)
-    // console.log(notes);
-    console.log(data);
+    // console.log(time)
 
-    const addNotes = (notes) => {
+
+    // const addNotes = (notes) => {
         // setNot(prevState => [...prevState, notes])
-    }
+    // }
 
-    // console.log(time);
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -90,7 +88,8 @@ export const AddNot = ({tim}) => {
             const newNotes = {
                 description,
                 notes,
-                data
+                data: new Date().toLocaleTimeString(),
+                time: new Date().getTime()
             }
 
             if (newError.length === 0) {
@@ -103,9 +102,9 @@ export const AddNot = ({tim}) => {
                 })
                     .then((r) => r.json())
                     .then((notes) => {
-                        if (typeof addNotes === "function") {
-                            addNotes(notes)
-                        }
+                        // if (typeof addNotes === "function") {
+                        //     addNotes(notes)
+                        // }
                     })
 
             }
@@ -114,8 +113,7 @@ export const AddNot = ({tim}) => {
         }
     }
     useEffect(() => {
-        setData(new Date().toLocaleTimeString())
-        setTime(new Date().getTime())
+        // setData(new Date().toLocaleTimeString())
 
         fetch('http://localhost:3000/notes')
             .then(r => r.json())
