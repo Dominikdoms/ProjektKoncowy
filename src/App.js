@@ -15,8 +15,14 @@ import {Home, Notes, AddNot, Notifications} from './components/Nav'
 
 const App = () => {
     const [dataset, setDataset] = useState([])
-    const [currentTime, setCurrentTime] = useState('')
-    // console.log(currentTime);
+    const [currentTime, setCurrentTime] = useState('')//new Date().getTime()
+    const [indexesTenMin, setIndexesTenMin] = useState([]);
+    const [indexesOneHour, setIndexesOneHour] = useState([]);
+    const [indexesTwoDay, setIndexesTwoDay] = useState([]);
+    // console.log(indexesTenMin);
+    // console.log(indexesOneHour);
+    // console.log(indexesTwoDay);
+
     useEffect(() => {
         fetch('http://localhost:3000/notes')
             .then(r => r.json())
@@ -26,35 +32,44 @@ const App = () => {
 
         const intervalId = setInterval(() => {
             setCurrentTime(new Date().getTime())
-        },2000)//co minutę
-
+        }, 2000)
         return () => {
             clearInterval(intervalId)
         }
     }, [])
 
-
     const AddDate = (data) => {
         setDataset(prevState => [...prevState, data])
     }
 
-//wyświetla czas i ID każdego elementu db.json
-//     dataset.map((data) => (
-//         console.log(`${data.time} ${data.id}`)
-//     ))
-
-    const indexSatisfy = [];
-    for (let i = 0; i < dataset.length; i++) {
-        if (dataset[i].time >= currentTime) {
-            indexSatisfy.push(i)
+    useEffect(() => {
+        const indexTenMin = [];
+        const indexOneHour = [];
+        const indexTwoDay = [];
+        for (let i = 0; i < dataset.length; i++) {
+            // 10min: 600000
+            if ((dataset[i].time + 600000) < currentTime) {
+                indexTenMin.push(i)
+            }
+            // 1h: 3600000 ms
+            if ((dataset[i].time + 3600000) < currentTime) {
+                indexOneHour.push(i)
+            }
+            // 2dni: 172800000 ms
+            if ((dataset[i].time + 172800000) < currentTime) {
+                indexTwoDay.push(i)
+            }
         }
-    }
-    console.log(indexSatisfy);
-
+        setIndexesTenMin(indexTenMin);
+        setIndexesOneHour(indexOneHour);
+        setIndexesTwoDay(indexTwoDay);
+    }, [currentTime])//odpala się przy każdej
+    // aktualizacji aktualnego czasu
+    // console.log(indexes);
 
     return (
         <HashRouter>
-            <ul style={{display: "flex", justifyContent: "space-around"}}>
+            <ul style={{display: "flex", justifyContent: "space-around", alignItems: "center"}}>
                 <li>
                     <Link to={"/home"}>Strona główna</Link>
                 </li>
@@ -64,9 +79,17 @@ const App = () => {
                 <li>
                     <Link to={"/addNot"}>Dodaj notatkę</Link>
                 </li>
+
                 <li>
                     <Link to={"/notifications"}>Powtórka</Link>
                 </li>
+
+                <div style={{display: "flex"}}>
+                    <p style={{color: "red", paddingRight: 10}}>{indexesTenMin.length}</p>
+                    <p style={{color: "blue"}}>{indexesOneHour.length}</p>
+                    <p style={{color: "green", paddingLeft: 10}}>{indexesTwoDay.length}</p>
+                </div>
+
             </ul>
             <Switch>
                 <Route exact path={"/home"}>
@@ -82,7 +105,12 @@ const App = () => {
                 </Route>
 
                 <Route exact path={"/notifications"}>
-                    <Notifications tim={"Powtórka"}/>
+                    <Notifications
+                        dataset={dataset}
+                        tenMin={indexesTenMin}
+                        oneHour={indexesOneHour}
+                        twoDay={indexesTwoDay}
+                        tim={"Powtórka"}/>
                 </Route>
             </Switch>
         </HashRouter>

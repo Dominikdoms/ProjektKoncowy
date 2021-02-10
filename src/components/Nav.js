@@ -14,7 +14,7 @@ export const Home = ({tim}) => {
 //-------------------------------
 
 export const Notes = ({tim}) => {
-const [notes, setNotes] = useState([])
+    const [notes, setNotes] = useState([])
 
     useEffect(() => {
         fetch('http://localhost:3000/notes')
@@ -40,13 +40,13 @@ const [notes, setNotes] = useState([])
             <ul>{notes.map(notes => (
                 <>
                     <li style={{paddingTop: 20}} key={notes.id + 5}>{notes.hour}</li>
-                <li key={notes.id + 4}>
-                    {notes.description}
-                </li>
+                    <li key={notes.id + 4}>
+                        {notes.description}
+                    </li>
 
-                <li key={notes.id + 3}>
-                    {notes.notes}
-                </li>
+                    <li key={notes.id + 3}>
+                        {notes.notes}
+                    </li>
                     <button key={notes.id + 2} onClick={() => deleteNotes(notes.id)}>Usuń</button>
                 </>
             ))}</ul>
@@ -78,7 +78,7 @@ export const AddNot = ({onAddDate}, {tim}) => {
             const newNotes = {
                 description,
                 notes,
-                hour: new Date().toLocaleTimeString(),
+                hour: new Date(),//.toLocaleTimeString(),
                 time: new Date().getTime()
             }
 
@@ -101,7 +101,6 @@ export const AddNot = ({onAddDate}, {tim}) => {
             setDescription("")
         }
     }
-
 
 
     return (
@@ -133,9 +132,32 @@ export const AddNot = ({onAddDate}, {tim}) => {
 //------NOTIFICATIONS-------
 //--------------------------
 
-export const Notifications = ({tim}) => {
+export const Notifications = ({tim, dataset, tenMin, oneHour, twoDay}) => {
     return (
-        <h1>{tim}</h1>
+        <>
+            <h1>{tim}</h1>
+            <ul style={{color: "red"}}>{tenMin.map(el => (
+                <>
+                    <li>{dataset[el].description}</li>
+                    <li>{dataset[el].notes}</li>
+                    <button>Przeczytane</button>
+                </>
+            ))}</ul>
+            <ul style={{color: "blue"}}>{oneHour.map(el => (
+                <>
+                    <li>{dataset[el].description}</li>
+                    <li>{dataset[el].notes}</li>
+                    <button>Przeczytane</button>
+                </>
+            ))}</ul>
+            <ul style={{color: "green"}}>{twoDay.map(el => (
+                <>
+                    <li>{dataset[el].description}</li>
+                    <li>{dataset[el].notes}</li>
+                    <button>Przeczytane</button>
+                </>
+            ))}</ul>
+        </>
     )
 }
 
