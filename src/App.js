@@ -13,41 +13,38 @@ import {
 import {Home, Notes, AddNot, Notifications} from './components/Nav'
 
 
-
-
-
 const App = () => {
   return(
       <HashRouter>
           <ul style={{display: "flex", justifyContent: "space-around"}}>
               <li>
-                  <Link to={"/home"}>Home</Link>
+                  <Link to={"/home"}>Strona główna</Link>
               </li>
               <li>
-                  <Link to={"/notes"}>Notes</Link>
+                  <Link to={"/notes"}>Wszystkie notatki</Link>
               </li>
               <li>
-                  <Link to={"/addNot"}>Add notes</Link>
+                  <Link to={"/addNot"}>Dodaj notatkę</Link>
               </li>
               <li>
-                  <Link to={"/notifications"}>Notifications</Link>
+                  <Link to={"/notifications"}>Powtórka</Link>
               </li>
           </ul>
           <Switch>
               <Route exact path={"/home"}>
-                  <Home tim={"home"}/>
+                  <Home tim={"Strona główna"}/>
               </Route>
 
               <Route exact path={"/notes"}>
-                  <Notes tim={"notes"}/>
+                  <Notes tim={"Wszystkie notatki:"}/>
               </Route>
 
               <Route exact path={"/addNot"}>
-                  <AddNot tim={"addNot"}/>
+                  <AddNot tim={"Dodaj notatkę:"}/>
               </Route>
 
               <Route exact path={"/notifications"}>
-                  <Notifications tim={"notifications"}/>
+                  <Notifications tim={"Powtórka"}/>
               </Route>
           </Switch>
       </HashRouter>
