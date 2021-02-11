@@ -19,9 +19,7 @@ const App = () => {
     const [indexesTenMin, setIndexesTenMin] = useState([]);
     const [indexesOneHour, setIndexesOneHour] = useState([]);
     const [indexesTwoDay, setIndexesTwoDay] = useState([]);
-    // console.log(indexesTenMin);
-    // console.log(indexesOneHour);
-    // console.log(indexesTwoDay);
+
 
     useEffect(() => {
         fetch('http://localhost:3000/notes')
@@ -48,15 +46,15 @@ const App = () => {
         const indexTwoDay = [];
         for (let i = 0; i < dataset.length; i++) {
             // 10min: 600000
-            if ((dataset[i].time + 600000) < currentTime) {
+            if ((dataset[i].time + 600000) < currentTime && (dataset[i].time+ 3600000) > currentTime) {
                 indexTenMin.push(i)
             }
             // 1h: 3600000 ms
-            if ((dataset[i].time + 3600000) < currentTime) {
+            if ((dataset[i].time + 3600000) < currentTime && (dataset[i].time+ 3600000) > 172800000) {
                 indexOneHour.push(i)
             }
-            // 2dni: 172800000 ms
-            if ((dataset[i].time + 172800000) < currentTime) {
+            // 2dni: 172800000 ms;    30dni: 2592000000 ms
+            if ((dataset[i].time + 172800000) < currentTime && (dataset[i].time+ 3600000) > 2592000000) {
                 indexTwoDay.push(i)
             }
         }
@@ -66,31 +64,49 @@ const App = () => {
     }, [currentTime])//odpala się przy każdej
     // aktualizacji aktualnego czasu
     // console.log(indexes);
+    //--------------------------------------------
+    //TEST MENU
+
+
+    const [showMenu, setShowMenu] = useState(true);
+    const [isMobile, setIsMobile] = useState(false);
+    const handleShowMenu = e => {
+        e.preventDefault();
+        setShowMenu(!showMenu);
+    }
+    useEffect(() => {
+        const query = window.matchMedia("(min-width:720px)");
+        query.addListener((e) => {
+            setIsMobile(!e.matches);
+            setShowMenu(e.matches);
+        });
+    }, [])
+
 
     return (
         <HashRouter>
-            <ul style={{display: "flex", justifyContent: "space-around", alignItems: "center"}}>
-                <li>
-                    <Link to={"/home"}>Strona główna</Link>
-                </li>
-                <li>
-                    <Link to={"/notes"}>Wszystkie notatki</Link>
-                </li>
-                <li>
-                    <Link to={"/addNot"}>Dodaj notatkę</Link>
-                </li>
+            <nav>
+                {isMobile && <a onClick={handleShowMenu}>Menu</a>}
+                {showMenu &&
+                <ul>
+                    <li>
+                        <Link to={"/home"}>Strona główna</Link>
+                    </li>
+                    <li>
+                        <Link to={"/notes"}>Wszystkie notatki</Link>
+                    </li>
+                    <li>
+                        <Link to={"/addNot"}>Dodaj notatkę</Link>
+                    </li>
 
-                <li>
-                    <Link to={"/notifications"}>Powtórka</Link>
-                </li>
+                    <li>
+                        <Link to={"/notifications"}>Powtórka</Link>
+                    </li>
+                </ul>
+                }
+            </nav>
 
-                <div style={{display: "flex"}}>
-                    <p style={{color: "red", paddingRight: 10}}>{indexesTenMin.length}</p>
-                    <p style={{color: "blue"}}>{indexesOneHour.length}</p>
-                    <p style={{color: "green", paddingLeft: 10}}>{indexesTwoDay.length}</p>
-                </div>
 
-            </ul>
             <Switch>
                 <Route exact path={"/home"}>
                     <Home tim={"Strona główna"}/>
@@ -118,6 +134,37 @@ const App = () => {
 }
 
 export default App;
+
+// const[showMenu, setShowMenu] = useState(true);
+// const[isMobile, setIsMobile] = useState(true);
+// const handleShowMenu = e => {
+//     e.preventDefault();
+//     setShowMenu(!showMenu);
+// }
+// useEffect( () =>{
+//     const query = window.matchMedia("(min-width:720px)");
+//     query.addListener( (e)=>{
+//         setIsMobile(!e.matches);
+//         setShowMenu(e.matches);
+//     });
+// }, [])
+// return (
+//     <nav>
+//         {isMobile && <a onClick={handleShowMenu}>Menu</a>}
+//         {showMenu  &&
+//         <ul>
+//             <li><a href="">Link1</a></li>
+//             <li><a href="">Link2</a></li>
+//             <li><a href="">Link3</a></li>
+//             <li><a href="">Link4</a></li>
+//             <li><a href="">Link5</a></li>
+//         </ul>
+//         }
+//     </nav>
+// );
+// }
+
+
 //app jest odpalony w pliku index.js
 //a w tym pliku muszę z niego skorzystać :)
 //dlatego jest importowany

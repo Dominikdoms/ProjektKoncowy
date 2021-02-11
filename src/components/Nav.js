@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react';
+import Moment from "react-moment";//formatowanie dat
+import 'moment-timezone'//ustawia strefy czasowe
 
 //-----------------------
 //---------HOME----------
@@ -133,28 +135,29 @@ export const AddNot = ({onAddDate}, {tim}) => {
 //--------------------------
 
 export const Notifications = ({tim, dataset, tenMin, oneHour, twoDay}) => {
+
     return (
         <>
             <h1>{tim}</h1>
+            {/*10 min*/}
             <ul style={{color: "red"}}>{tenMin.map(el => (
                 <>
                     <li>{dataset[el].description}</li>
                     <li>{dataset[el].notes}</li>
-                    <button>Przeczytane</button>
                 </>
             ))}</ul>
+            {/*1 h*/}
             <ul style={{color: "blue"}}>{oneHour.map(el => (
                 <>
                     <li>{dataset[el].description}</li>
                     <li>{dataset[el].notes}</li>
-                    <button>Przeczytane</button>
                 </>
             ))}</ul>
+            {/*2 dni*/}
             <ul style={{color: "green"}}>{twoDay.map(el => (
                 <>
                     <li>{dataset[el].description}</li>
                     <li>{dataset[el].notes}</li>
-                    <button>Przeczytane</button>
                 </>
             ))}</ul>
         </>
@@ -174,8 +177,31 @@ export const Notifications = ({tim, dataset, tenMin, oneHour, twoDay}) => {
 
 
 
-
-
+// export const Notifications = ({tim, dataset, tenMin, oneHour, twoDay}) => {
+//     const [notes, setNotes] = useState([])
+// NIE DZIAŁA JESZCZE/// Można przećwiczyć, ale już nie potrzebuje tej funkcji
+//     const addId = (id) => {
+//         const data = {
+//             tenId: id
+//         };
+//
+//         fetch(`http://localhost:3000/notes/${id}`, {
+//             method: "PATCH",
+//
+//             body: JSON.stringify(data),
+//             headers: {
+//                 "Content-Type": "application/json"
+//             }
+//         })
+//             .then(response => response.json())
+//             .then(data => {
+//                 console.log(data);
+//                 setNotes((prevNotes) => prevNotes.filter((not) => not.id !== id))
+//             })
+//             .catch(error => {
+//                 console.log(error);
+//             });
+//     }
 
 
 
