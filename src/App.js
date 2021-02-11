@@ -64,8 +64,6 @@ const App = () => {
     }, [currentTime])//odpala się przy każdej
     // aktualizacji aktualnego czasu
     // console.log(indexes);
-    //--------------------------------------------
-    //TEST MENU
 
 
     const [showMenu, setShowMenu] = useState(true);
@@ -102,8 +100,12 @@ const App = () => {
                     <li>
                         <Link to={"/notifications"}>Powtórka</Link>
                     </li>
-                </ul>
-                }
+                </ul>}
+                <div>
+                    <p style={{color: "red"}}>Pierwsza powtórka: {indexesTenMin.length}</p>
+                    <p style={{color: "blue"}}>Druga powtórka: {indexesOneHour.length}</p>
+                    <p style={{color: "green"}}>Trzecia powtórka: {indexesTwoDay.length}</p>
+                </div>
             </nav>
 
 
