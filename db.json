@@ -1,137 +1,60 @@
 {
   "notes": [
     {
-      "description": "pierwsza notatka",
-      "notes": "jakiaś treść pierwszej notatki ",
-      "hour": "2021-02-12T09:40:36.200Z",
-      "time": 1613122836200,
+      "description": "Lorem Ipsum",
+      "notes": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "hour": "2021-02-12T20:48:42.241Z",
+      "time": 1613162922241,
       "id": 1
     },
     {
-      "description": "mmmmmm",
-      "notes": "mmmmmm",
-      "hour": "2021-02-12T09:44:07.492Z",
-      "time": 1613123047492,
+      "description": "Matematyka",
+      "notes": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.",
+      "hour": "2021-02-12T20:50:41.758Z",
+      "time": 1613163041758,
       "id": 2
     },
     {
-      "description": "sadsas",
-      "notes": "sdsgadg",
-      "hour": "2021-02-12T09:47:32.786Z",
-      "time": 1613123252786,
+      "description": "Polski",
+      "notes": "Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "hour": "2021-02-12T20:50:58.988Z",
+      "time": 1613163058988,
       "id": 3
     },
     {
-      "description": "dgsadsga",
-      "notes": "sdgsdsd",
-      "hour": "2021-02-12T09:47:36.193Z",
-      "time": 1613123256193,
+      "description": "Angielski",
+      "notes": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.",
+      "hour": "2021-02-12T20:51:10.609Z",
+      "time": 1613163070609,
       "id": 4
     },
     {
-      "description": "sdgssada",
-      "notes": "sdgsagd",
-      "hour": "2021-02-12T09:47:39.337Z",
-      "time": 1613123259337,
+      "description": "Myzyka",
+      "notes": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+      "hour": "2021-02-12T20:51:21.777Z",
+      "time": 1613163081777,
       "id": 5
     },
     {
-      "description": "sdahshsds",
-      "notes": "sddsgdsags",
-      "hour": "2021-02-12T09:47:43.193Z",
-      "time": 1613123263193,
+      "description": "Fizyka",
+      "notes": "Where can I get some?\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+      "hour": "2021-02-12T20:51:34.448Z",
+      "time": 1613163094448,
       "id": 6
     },
     {
-      "description": "sdasadgsa",
-      "notes": "dsagdsg",
-      "hour": "2021-02-12T09:47:45.897Z",
-      "time": 1613123265897,
+      "description": "Malarstwo ",
+      "notes": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "hour": "2021-02-12T20:51:58.998Z",
+      "time": 1613163118998,
       "id": 7
     },
     {
-      "description": "1",
-      "notes": "1",
-      "hour": "2021-02-12T09:54:22.375Z",
-      "time": 1613123662375,
+      "description": "Aktorstwo",
+      "notes": "What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "hour": "2021-02-12T20:52:20.728Z",
+      "time": 1613163140728,
       "id": 8
-    },
-    {
-      "description": "2",
-      "notes": "2",
-      "hour": "2021-02-12T09:54:24.502Z",
-      "time": 1613123664502,
-      "id": 9
-    },
-    {
-      "description": "3",
-      "notes": "3",
-      "hour": "2021-02-12T09:54:26.024Z",
-      "time": 1613123666024,
-      "id": 10
-    },
-    {
-      "description": "4",
-      "notes": "4",
-      "hour": "2021-02-12T09:54:29.185Z",
-      "time": 1613123669185,
-      "id": 11
-    },
-    {
-      "description": "5",
-      "notes": "5",
-      "hour": "2021-02-12T09:54:31.111Z",
-      "time": 1613123671111,
-      "id": 12
-    },
-    {
-      "description": "6",
-      "notes": "6",
-      "hour": "2021-02-12T09:54:33.138Z",
-      "time": 1613123673138,
-      "id": 13
-    },
-    {
-      "description": "gdas",
-      "notes": "g",
-      "hour": "2021-02-12T10:04:09.919Z",
-      "time": 1613124249919,
-      "id": 14
-    },
-    {
-      "description": "asffdsads",
-      "notes": "agadg",
-      "hour": "2021-02-12T10:04:13.728Z",
-      "time": 1613124253728,
-      "id": 15
-    },
-    {
-      "description": "OPIS",
-      "notes": "NOTATAK :)",
-      "hour": "2021-02-12T10:06:01.089Z",
-      "time": 1613124361089,
-      "id": 16
-    },
-    {
-      "description": "dfas",
-      "notes": "daf",
-      "hour": "2021-02-12T10:09:23.822Z",
-      "time": 1613124563822,
-      "id": 17
-    },
-    {
-      "description": "dfsa",
-      "notes": "sdaf",
-      "hour": "2021-02-12T10:11:00.157Z",
-      "time": 1613124660157,
-      "id": 18
-    },
-    {
-      "description": "opis",
-      "notes": "treść",
-      "hour": "2021-02-12T10:17:08.546Z",
-      "time": 1613125028546,
-      "id": 19
     }
   ]
 }

@@ -1,5 +1,12 @@
-@import "variables";
-@import "commons";
+@import "settings/colors";
+@import "settings/fonts";
+@import "settings/variables";
+@import "settings/commons";
 @import "elements/nav";
 @import "elements/content";
+@import "elements/notes";
 @import "generic/reset";
+@import "settings/mixins";
+
+
+

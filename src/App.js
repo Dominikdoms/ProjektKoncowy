@@ -24,9 +24,6 @@ const App = () => {
     const [indexesOneYear, setIndexesOneYear] = useState([]);
 
 
-
-
-
     useEffect(() => {
         fetch('http://localhost:3000/notes')
             .then(r => r.json())
@@ -78,30 +75,30 @@ const App = () => {
             // if ((dataset[i].time + 31536000000) < currentTime && (dataset[i].time+ 31622400000) > currentTime) {
             //     indexOneYear.push(i)
             // }
-        //-------------------------------
-        //-----TESTOWANIE NOTATNOKA------
-        //-------------------------------
-            // od 10s: 10000;     do 20s 20000 ms;
-            if ((dataset[i].time + 10000) < currentTime && (dataset[i].time+ 20000) > currentTime) {
+            //-------------------------------
+            //-----TESTOWANIE NOTATNOKA------
+            //-------------------------------
+            // od 5s: 5000;     do 10s 10000 ms;
+            if ((dataset[i].time + 5000) < currentTime && (dataset[i].time + 10000) > currentTime) {
                 indexTenMin.push(i)
             }
-            // od 30s: 30000 ms;     do 40s: 40000 ms;
-            if ((dataset[i].time + 30000) < currentTime && (dataset[i].time+ 40000) > currentTime) {
+            // od 15s: 15000 ms;     do 20s: 20000 ms;
+            if ((dataset[i].time + 15000) < currentTime && (dataset[i].time + 20000) > currentTime) {
                 indexTwoDay.push(i)
             }
-            // od 50s: 50000 ms;   do 60s 60000 ms;
-            if ((dataset[i].time + 50000) < currentTime && (dataset[i].time+ 60000) > currentTime) {
+            // od 25s: 25000 ms;   do 30s 30000 ms;
+            if ((dataset[i].time + 25000) < currentTime && (dataset[i].time + 30000) > currentTime) {
                 indexOneWeek.push(i)
             }
-            // od 70s: 70000 ms;     do 80s: 80000 ms;
-            if ((dataset[i].time + 70000) < currentTime && (dataset[i].time+ 80000) > currentTime) {
+            // od 35s: 35000 ms;     do 40s: 40000 ms;
+            if ((dataset[i].time + 35000) < currentTime && (dataset[i].time + 40000) > currentTime) {
                 indexOneMonth.push(i)
             }
-            // od 90s: 90000 ms;      do 100s: 100000 ms;
-            if ((dataset[i].time + 90000) < currentTime && (dataset[i].time+ 100000) > currentTime) {
+            // od 45s: 45000 ms;      do 50s: 50000 ms;
+            if ((dataset[i].time + 45000) < currentTime && (dataset[i].time + 50000) > currentTime) {
                 indexOneYear.push(i)
             }
-        //-------------------------------------------
+            //-------------------------------------------
         }
         //przypisywanie wartości tablic do state
         setIndexesTenMin(indexTenMin);
@@ -130,104 +127,85 @@ const App = () => {
 
 
     return (
-        <HashRouter>
-            <nav>
-                {isMobile && <a onClick={handleShowMenu}>Menu</a>}
-                {showMenu &&
-                <ul>
-                    <li>
-                        <Link to={"/home"}>Strona główna</Link>
-                    </li>
-                    <li>
-                        <Link to={"/notes"}>Wszystkie notatki</Link>
-                    </li>
-                    <li>
-                        <Link to={"/addNot"}>Dodaj notatkę</Link>
-                    </li>
+        <>
 
-                    <li>
-                        <Link to={"/notifications"}>Powtórka</Link>
-                    </li>
-                </ul>}
-                <div style={{display: "flex"}}>
-                    <p style={{color: "red"}}>po 10min: {indexesTenMin.length}</p>
-                    <p style={{color: "green"}}>Po 2 dniach: {indexesTwoDay.length}</p>
-                    <p style={{color: "Blue"}}>Po 7 dniach: {indexesOneWeek.length}</p>
-                    <p style={{color: "purple"}}>Po 30 dniach: {indexesOneMonth.length}</p>
-                    <p style={{color: "orange"}}>Po 365 dniach: {indexesOneYear.length}</p>
-                </div>
-            </nav>
+            <HashRouter>
+                <header className={"header__container container"}>
+                    <div className={"header-notifications"}>
+                        <div>
+                            <p className={"tenMinutes"}>1 powtórka: {indexesTenMin.length} - notatek</p>
+                            <p className={"twoDays"}>2 powtórka: {indexesTwoDay.length} - notatek</p>
+                            <p className={"week"}>3 powtórka: {indexesOneWeek.length} - notatek</p>
+                        </div>
+                        <div>
+                            <p className={"month"}>4 powtórka: {indexesOneMonth.length} - notatek</p>
+                            <p className={"year"}>5 powtórka: {indexesOneYear.length} - notatek</p>
+                        </div>
+                    </div>
+                    <nav>
+                        {isMobile && <div onClick={handleShowMenu} className={"menu__toggle"}>
+                            <span/>
+                            <span/>
+                            <span/></div>}
+
+                        {showMenu &&
+                        <div className={"menu__list"}>
+                            <ul>
+                                <li className={"nav-element"}>
+                                    <Link to={"/home"}>Strona główna</Link>
+                                </li>
+                                <li className={"nav-element"}>
+                                    <Link to={"/notes"}>Wszystkie notatki</Link>
+                                </li>
+                                <li className={"nav-element"}>
+                                    <Link to={"/addNot"}>Dodaj notatkę</Link>
+                                </li>
+
+                                <li className={"nav-element"}>
+                                    <Link to={"/notifications"}>Powtórka</Link>
+                                </li>
+                            </ul>
+                        </div>
+                        }
+                    </nav>
+                </header>
 
 
-            <Switch>
-                <Route exact path={"/home"}>
-                    <Home tim={"Strona główna"}/>
-                </Route>
+                <Switch>
+                    <Route exact path={"/home"}>
+                        <Home tim={"Strona główna"}/>
+                    </Route>
 
-                <Route exact path={"/notes"}>
-                    <Notes tim={"Wszystkie notatki:"}/>
-                </Route>
+                    <Route exact path={"/notes"}>
+                        <Notes tim={"Wszystkie notatki:"}/>
+                    </Route>
 
-                <Route exact path={"/addNot"}>
-                    <AddNot onAddDate={AddDate} tim={"Dodaj notatkę:"}/>
-                </Route>
+                    <Route exact path={"/addNot"}>
+                        <AddNot onAddDate={AddDate} tim={"Dodaj notatkę:"}/>
+                    </Route>
 
-                <Route exact path={"/notifications"}>
-                    <Notifications
-                        dataset={dataset}
+                    <Route exact path={"/notifications"}>
+                        <Notifications
+                            dataset={dataset}
 
-                        tenMin={indexesTenMin}
-                        twoDay={indexesTwoDay}
+                            tenMin={indexesTenMin}
+                            twoDay={indexesTwoDay}
 
-                        OneWeek={indexesOneWeek}
-                        OneMonth={indexesOneMonth}
-                        OneYear={indexesOneYear}
+                            OneWeek={indexesOneWeek}
+                            OneMonth={indexesOneMonth}
+                            OneYear={indexesOneYear}
 
-                        tim={"Powtórka"}/>
-                </Route>
-            </Switch>
-        </HashRouter>
+                            tim={"Powtórka"}/>
+                    </Route>
+                </Switch>
+            </HashRouter>
+        </>
     )
 }
 
 export default App;
 
-// const[showMenu, setShowMenu] = useState(true);
-// const[isMobile, setIsMobile] = useState(true);
-// const handleShowMenu = e => {
-//     e.preventDefault();
-//     setShowMenu(!showMenu);
-// }
-// useEffect( () =>{
-//     const query = window.matchMedia("(min-width:720px)");
-//     query.addListener( (e)=>{
-//         setIsMobile(!e.matches);
-//         setShowMenu(e.matches);
-//     });
-// }, [])
-// return (
-//     <nav>
-//         {isMobile && <a onClick={handleShowMenu}>Menu</a>}
-//         {showMenu  &&
-//         <ul>
-//             <li><a href="">Link1</a></li>
-//             <li><a href="">Link2</a></li>
-//             <li><a href="">Link3</a></li>
-//             <li><a href="">Link4</a></li>
-//             <li><a href="">Link5</a></li>
-//         </ul>
-//         }
-//     </nav>
-// );
-// }
 
-
-//app jest odpalony w pliku index.js
-//a w tym pliku muszę z niego skorzystać :)
-//dlatego jest importowany
-
-
-//DAREK:
 // import './sass/main.scss'
 // import {useEffect, useState} from "react";
 // import {addNewNote, getAllNotes} from "./services/api-service";
