@@ -1,116 +1,95 @@
 {
   "notes": [
     {
-      "description": "Polski",
-      "notes": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-      "hour": "2021-02-10T22:49:10.102Z",
-      "time": 1612997350102,
+      "description": "pierwsza notatka",
+      "notes": "jakiaś treść pierwszej notatki ",
+      "hour": "2021-02-12T09:40:36.200Z",
+      "time": 1613122836200,
+      "id": 1
+    },
+    {
+      "description": "mmmmmm",
+      "notes": "mmmmmm",
+      "hour": "2021-02-12T09:44:07.492Z",
+      "time": 1613123047492,
       "id": 2
     },
     {
-      "description": "Fizyka",
-      "notes": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"de Finibus Bonorum et Malorum\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-      "hour": "2021-02-10T22:49:32.823Z",
-      "time": 1612997372823,
+      "description": "sadsas",
+      "notes": "sdsgadg",
+      "hour": "2021-02-12T09:47:32.786Z",
+      "time": 1613123252786,
+      "id": 3
+    },
+    {
+      "description": "dgsadsga",
+      "notes": "sdgsdsd",
+      "hour": "2021-02-12T09:47:36.193Z",
+      "time": 1613123256193,
       "id": 4
     },
     {
-      "description": "Biologia",
-      "notes": "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
-      "hour": "2021-02-10T22:49:42.763Z",
-      "time": 1612997382763,
+      "description": "sdgssada",
+      "notes": "sdgsagd",
+      "hour": "2021-02-12T09:47:39.337Z",
+      "time": 1613123259337,
       "id": 5
     },
     {
-      "description": "WOS",
-      "notes": "Why do we use it?\\\\\\\\\\\\\\\\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-      "hour": "2021-02-10T22:49:53.058Z",
-      "time": 1612997393058,
+      "description": "sdahshsds",
+      "notes": "sddsgdsags",
+      "hour": "2021-02-12T09:47:43.193Z",
+      "time": 1613123263193,
       "id": 6
     },
     {
-      "description": "sadgsg",
-      "notes": "sdgas",
-      "hour": "2021-02-11T08:47:21.320Z",
-      "time": 1613033241320,
+      "description": "sdasadgsa",
+      "notes": "dsagdsg",
+      "hour": "2021-02-12T09:47:45.897Z",
+      "time": 1613123265897,
       "id": 7
     },
     {
-      "description": "asd",
-      "notes": "gsa",
-      "hour": "2021-02-11T08:50:34.488Z",
-      "time": 1613033434488,
+      "description": "1",
+      "notes": "1",
+      "hour": "2021-02-12T09:54:22.375Z",
+      "time": 1613123662375,
       "id": 8
     },
     {
-      "description": "dadg",
-      "notes": "sadg",
-      "hour": null,
-      "time": 1613033490637,
+      "description": "2",
+      "notes": "2",
+      "hour": "2021-02-12T09:54:24.502Z",
+      "time": 1613123664502,
       "id": 9
     },
     {
-      "description": "gdsa",
-      "notes": "dsgd",
-      "hour": "1976-04-19T11:59:00.000Z",
-      "time": 1613033504500,
+      "description": "3",
+      "notes": "3",
+      "hour": "2021-02-12T09:54:26.024Z",
+      "time": 1613123666024,
       "id": 10
     },
     {
-      "description": "adg",
-      "notes": "dsag",
-      "hour": "2021-02-11T08:52:07.300Z",
-      "time": 1613033527300,
+      "description": "4",
+      "notes": "4",
+      "hour": "2021-02-12T09:54:29.185Z",
+      "time": 1613123669185,
       "id": 11
     },
     {
-      "description": "re agfsdhsdhs",
-      "notes": "ggggggggggggggggggggggggggggggggggggggggggggggggggggg",
-      "hour": "2021-02-11T11:18:45.497Z",
-      "time": 1613042325497,
+      "description": "5",
+      "notes": "5",
+      "hour": "2021-02-12T09:54:31.111Z",
+      "time": 1613123671111,
       "id": 12
     },
     {
-      "description": "gaas",
-      "notes": "sgdagdsddsagddggddgsd",
-      "hour": "2021-02-11T11:23:00.590Z",
-      "time": 1613042580590,
+      "description": "6",
+      "notes": "6",
+      "hour": "2021-02-12T09:54:33.138Z",
+      "time": 1613123673138,
       "id": 13
-    },
-    {
-      "description": "dasfasgddasgda",
-      "notes": "dsasdagsdaag",
-      "hour": "2021-02-11T11:23:22.046Z",
-      "time": 1613042602046,
-      "id": 14
-    },
-    {
-      "description": "dsagsd",
-      "notes": "sdags",
-      "hour": "2021-02-11T16:12:13.508Z",
-      "time": 1613059933508,
-      "id": 15
-    },
-    {
-      "description": "sdagsa",
-      "notes": "sadgsg",
-      "hour": "2021-02-11T16:15:28.779Z",
-      "time": 1613060128779,
-      "id": 16
-    },
-    {
-      "description": "dddddd",
-      "notes": "ddddddd",
-      "hour": "2021-02-11T16:16:02.364Z",
-      "time": 1613060162364,
-      "id": 17
-    },
-    {
-      "description": "ddd",
-      "notes": "ddd",
-      "hour": "2021-02-11T16:16:42.859Z",
-      "time": 1613060202859,
-      "id": 18
     }
   ]
 }

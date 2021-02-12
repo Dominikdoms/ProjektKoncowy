@@ -14,11 +14,17 @@ import {Home, Notes, AddNot, Notifications} from './components/Nav'
 
 
 const App = () => {
-    const [dataset, setDataset] = useState([])
+    const [dataset, setDataset] = useState([])//dane z JSON SERVER
     const [currentTime, setCurrentTime] = useState('')//new Date().getTime()
+
     const [indexesTenMin, setIndexesTenMin] = useState([]);
-    const [indexesOneHour, setIndexesOneHour] = useState([]);
     const [indexesTwoDay, setIndexesTwoDay] = useState([]);
+    const [indexesOneWeek, setIndexesOneWeek] = useState([]);
+    const [indexesOneMonth, setIndexesOneMonth] = useState([]);
+    const [indexesOneYear, setIndexesOneYear] = useState([]);
+
+
+
 
 
     useEffect(() => {
@@ -41,26 +47,68 @@ const App = () => {
     }
 
     useEffect(() => {
+        // przypisywanie do tablic
         const indexTenMin = [];
-        const indexOneHour = [];
         const indexTwoDay = [];
+        const indexOneWeek = [];
+        const indexOneMonth = [];
+        const indexOneYear = [];
+
         for (let i = 0; i < dataset.length; i++) {
-            // 10min: 600000
-            if ((dataset[i].time + 600000) < currentTime && (dataset[i].time+ 3600000) > currentTime) {
+            //-------------------------------------
+            //------------PEŁNA WERSJA-------------
+            //-------------------------------------
+            // // od 10min: 600000;     do 1 dzień: 86400000 ms;
+            // if ((dataset[i].time + 600000) < currentTime && (dataset[i].time+ 86400000) > currentTime) {
+            //     indexTenMin.push(i)
+            // }
+            // // od 2dni: 172800000 ms;  do 3dni: 259200000 ms;
+            // if ((dataset[i].time + 172800000) < currentTime && (dataset[i].time+ 259200000) > currentTime) {
+            //     indexTwoDay.push(i)
+            // }
+            // // od 7dni: 604800000 ms;   do 8dni: 691200000 ms;
+            // if ((dataset[i].time + 604800000) < currentTime && (dataset[i].time+ 691200000) > currentTime) {
+            //     indexOneWeek.push(i)
+            // }
+            // //od 30 dni: 2592000000 ms;   do 32dni: 2678400000 ms;
+            // if ((dataset[i].time + 2592000000) < currentTime && (dataset[i].time+ 2678400000) > currentTime) {
+            //     indexOneMonth.push(i)
+            // }
+            // //od 365 dni: 31536000000 ms;   do 366dmi: 31622400000 ms;
+            // if ((dataset[i].time + 31536000000) < currentTime && (dataset[i].time+ 31622400000) > currentTime) {
+            //     indexOneYear.push(i)
+            // }
+        //-------------------------------
+        //-----TESTOWANIE NOTATNOKA------
+        //-------------------------------
+            // od 10s: 10000;     do 20s 20000 ms;
+            if ((dataset[i].time + 10000) < currentTime && (dataset[i].time+ 20000) > currentTime) {
                 indexTenMin.push(i)
             }
-            // 1h: 3600000 ms
-            if ((dataset[i].time + 3600000) < currentTime && (dataset[i].time+ 3600000) > 172800000) {
-                indexOneHour.push(i)
-            }
-            // 2dni: 172800000 ms;    30dni: 2592000000 ms
-            if ((dataset[i].time + 172800000) < currentTime && (dataset[i].time+ 3600000) > 2592000000) {
+            // od 30s: 30000 ms;     do 40s: 40000 ms;
+            if ((dataset[i].time + 30000) < currentTime && (dataset[i].time+ 40000) > currentTime) {
                 indexTwoDay.push(i)
             }
+            // od 50s: 50000 ms;   do 60s 60000 ms;
+            if ((dataset[i].time + 50000) < currentTime && (dataset[i].time+ 60000) > currentTime) {
+                indexOneWeek.push(i)
+            }
+            // od 70s: 70000 ms;     do 80s: 80000 ms;
+            if ((dataset[i].time + 70000) < currentTime && (dataset[i].time+ 80000) > currentTime) {
+                indexOneMonth.push(i)
+            }
+            // od 90s: 90000 ms;      do 100s: 100000 ms;
+            if ((dataset[i].time + 90000) < currentTime && (dataset[i].time+ 100000) > currentTime) {
+                indexOneYear.push(i)
+            }
+        //-------------------------------------------
         }
+        //przypisywanie wartości tablic do state
         setIndexesTenMin(indexTenMin);
-        setIndexesOneHour(indexOneHour);
         setIndexesTwoDay(indexTwoDay);
+        setIndexesOneWeek(indexOneWeek)
+        setIndexesOneMonth(indexOneMonth)
+        setIndexesOneYear(indexOneYear)
     }, [currentTime])//odpala się przy każdej
     // aktualizacji aktualnego czasu
     // console.log(indexes);
@@ -101,10 +149,12 @@ const App = () => {
                         <Link to={"/notifications"}>Powtórka</Link>
                     </li>
                 </ul>}
-                <div>
-                    <p style={{color: "red"}}>Pierwsza powtórka: {indexesTenMin.length}</p>
-                    <p style={{color: "blue"}}>Druga powtórka: {indexesOneHour.length}</p>
-                    <p style={{color: "green"}}>Trzecia powtórka: {indexesTwoDay.length}</p>
+                <div style={{display: "flex"}}>
+                    <p style={{color: "red"}}>po 10min: {indexesTenMin.length}</p>
+                    <p style={{color: "green"}}>Po 2 dniach: {indexesTwoDay.length}</p>
+                    <p style={{color: "Blue"}}>Po 7 dniach: {indexesOneWeek.length}</p>
+                    <p style={{color: "purple"}}>Po 30 dniach: {indexesOneMonth.length}</p>
+                    <p style={{color: "orange"}}>Po 365 dniach: {indexesOneYear.length}</p>
                 </div>
             </nav>
 
@@ -125,9 +175,14 @@ const App = () => {
                 <Route exact path={"/notifications"}>
                     <Notifications
                         dataset={dataset}
+
                         tenMin={indexesTenMin}
-                        oneHour={indexesOneHour}
                         twoDay={indexesTwoDay}
+
+                        OneWeek={indexesOneWeek}
+                        OneMonth={indexesOneMonth}
+                        OneYear={indexesOneYear}
+
                         tim={"Powtórka"}/>
                 </Route>
             </Switch>

@@ -134,27 +134,46 @@ export const AddNot = ({onAddDate}, {tim}) => {
 //------NOTIFICATIONS-------
 //--------------------------
 
-export const Notifications = ({tim, dataset, tenMin, oneHour, twoDay}) => {
+export const Notifications = ({tim, dataset, tenMin, twoDay, OneWeek, OneMonth, OneYear}) => {
 
     return (
         <>
             <h1>{tim}</h1>
-            {/*10 min*/}
+
+            {/*10 min; do 1 dzień*/}
             <ul style={{color: "red"}}>{tenMin.map(el => (
                 <>
                     <li>{dataset[el].description}</li>
                     <li>{dataset[el].notes}</li>
                 </>
             ))}</ul>
-            {/*1 h*/}
-            <ul style={{color: "blue"}}>{oneHour.map(el => (
+
+            {/*2 dni; do 3 dni*/}
+            <ul style={{color: "green"}}>{twoDay.map(el => (
                 <>
                     <li>{dataset[el].description}</li>
                     <li>{dataset[el].notes}</li>
                 </>
             ))}</ul>
-            {/*2 dni*/}
-            <ul style={{color: "green"}}>{twoDay.map(el => (
+
+            {/*7 dni; do 8 dni*/}
+            <ul style={{color: "blue"}}>{OneWeek.map(el => (
+                <>
+                    <li>{dataset[el].description}</li>
+                    <li>{dataset[el].notes}</li>
+                </>
+            ))}</ul>
+
+            {/*30 dni; do 31dni*/}
+            <ul style={{color: "purple"}}>{OneMonth.map(el => (
+                <>
+                    <li>{dataset[el].description}</li>
+                    <li>{dataset[el].notes}</li>
+                </>
+            ))}</ul>
+
+            {/*365 dni; do 366dni*/}
+            <ul style={{color: "orange"}}>{OneYear.map(el => (
                 <>
                     <li>{dataset[el].description}</li>
                     <li>{dataset[el].notes}</li>
