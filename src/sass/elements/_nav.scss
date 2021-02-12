@@ -20,7 +20,7 @@
   .tenMinutes{
     width: 177px;
     height: 20px;
-    background-color: #bc4747;
+    background-color: $color-tenMinutes;
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -31,7 +31,7 @@
   .twoDays{
     width: 177px;
     height: 20px;
-    background-color: #3e943e;
+    background-color: $color-twoDays;
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@
   .week{
     width: 177px;
     height: 20px;
-    background-color: #546aa9;
+    background-color: $color-week;
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -53,7 +53,7 @@
   .month{
     width: 177px;
     height: 20px;
-    background-color: #856fb7;
+    background-color: $color-month;
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -64,7 +64,7 @@
   .year{
     width: 177px;
     height: 20px;
-    background-color: #d9a027;
+    background-color: $color-year;
     border-radius: 6px;
     display: flex;
     align-items: center;

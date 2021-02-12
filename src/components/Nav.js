@@ -57,7 +57,8 @@ export const Notes = ({tim}) => {
                                     {notes.notes}
                                 </li>
                             </div>
-                            <button className={"notes-btn"} key={notes.id} onClick={() => deleteNotes(notes.id)}>Usuń</button>
+                            <button className={"notes-btn"} key={notes.id} onClick={() => deleteNotes(notes.id)}>Usuń
+                            </button>
                         </section>
                     </>
                 ))}</ul>
@@ -153,50 +154,93 @@ export const Notifications = ({tim, dataset, tenMin, twoDay, OneWeek, OneMonth, 
                 twoDay.length + OneWeek.length + OneMonth.length + OneYear.length}
                 </h1>
 
-                {/*10 min; do 1 dzień*/}
-                <ul style={{color: "red"}}>{tenMin.map((el, index) => (
-                    <>
-                        <li key={dataset[index].id + 2}>{dataset[el].hour}</li>
-                        <li key={dataset[index].id}>{dataset[el].description}</li>
-                        <li key={dataset[index].id + 1}>{dataset[el].notes}</li>
-                    </>
-                ))}</ul>
+                <div className={"notes-container"}>
 
-                {/*2 dni; do 3 dni*/}
-                <ul style={{color: "green"}}>{twoDay.map((el, index) => (
-                    <>
-                        <li key={dataset[index].id + 2}>{dataset[el].hour}</li>
-                        <li key={dataset[index].id}>{dataset[el].description}</li>
-                        <li key={dataset[index].id + 1}>{dataset[el].notes}</li>
-                    </>
-                ))}</ul>
+                    {/*10 min; do 1 dzień*/}
+                    <ul>{tenMin.map((el, index) => (
+                        <>
+                            <section className={"notes-all tenMinutes"}>
+                                <div className={"notes-time"}>
+                                    <li key={dataset[index].id + 2}>{dataset[el].hour}</li>
+                                </div>
+                                <div className={"notes-description"}>
+                                    <li key={dataset[index].id}>{dataset[el].description}</li>
+                                </div>
+                                <div className={"notes-content"}>
+                                    <li key={dataset[index].id + 1}>{dataset[el].notes}</li>
+                                </div>
+                            </section>
+                        </>
+                    ))}</ul>
 
-                {/*7 dni; do 8 dni*/}
-                <ul style={{color: "blue"}}>{OneWeek.map((el, index) => (
-                    <>
-                        <li key={dataset[index].id + 2}>{dataset[el].hour}</li>
-                        <li key={dataset[index].id}>{dataset[el].description}</li>
-                        <li key={dataset[index].id + 1}>{dataset[el].notes}</li>
-                    </>
-                ))}</ul>
+                    {/*2 dni; do 3 dni*/}
+                    <ul>{twoDay.map((el, index) => (
+                        <>
+                            <section className={"notes-all twoDays"}>
+                                <div className={"notes-time"}>
+                                    <li key={dataset[index].id + 2}>{dataset[el].hour}</li>
+                                </div>
+                                <div className={"notes-description"}>
+                                    <li key={dataset[index].id}>{dataset[el].description}</li>
+                                </div>
+                                <div className={"notes-content"}>
+                                    <li key={dataset[index].id + 1}>{dataset[el].notes}</li>
+                                </div>
+                            </section>
+                        </>
+                    ))}</ul>
 
-                {/*30 dni; do 31dni*/}
-                <ul style={{color: "purple"}}>{OneMonth.map((el, index) => (
-                    <>
-                        <li key={dataset[index].id + 2}>{dataset[el].hour}</li>
-                        <li key={dataset[index].id}>{dataset[el].description}</li>
-                        <li key={dataset[index].id + 1}>{dataset[el].notes}</li>
-                    </>
-                ))}</ul>
+                    {/*7 dni; do 8 dni*/}
+                    <ul>{OneWeek.map((el, index) => (
+                        <>
+                            <section className={"notes-all week"}>
+                                <div className={"notes-time"}>
+                                    <li key={dataset[index].id + 2}>{dataset[el].hour}</li>
+                                </div>
+                                <div className={"notes-description"}>
+                                    <li key={dataset[index].id}>{dataset[el].description}</li>
+                                </div>
+                                <div className={"notes-content"}>
+                                    <li key={dataset[index].id + 1}>{dataset[el].notes}</li>
+                                </div>
+                            </section>
+                        </>
+                    ))}</ul>
 
-                {/*365 dni; do 366dni*/}
-                <ul style={{color: "orange"}}>{OneYear.map((el, index) => (
-                    <>
-                        <li key={dataset[index].id + 2}>{dataset[el].hour}</li>
-                        <li key={dataset[index].id}>{dataset[el].description}</li>
-                        <li key={dataset[index].id + 1}>{dataset[el].notes}</li>
-                    </>
-                ))}</ul>
+                    {/*30 dni; do 31dni*/}
+                    <ul>{OneMonth.map((el, index) => (
+                        <>
+                            <section className={"notes-all month"}>
+                                <div className={"notes-time"}>
+                                    <li key={dataset[index].id + 2}>{dataset[el].hour}</li>
+                                </div>
+                                <div className={"notes-description"}>
+                                    <li key={dataset[index].id}>{dataset[el].description}</li>
+                                </div>
+                                <div className={"notes-content"}>
+                                    <li key={dataset[index].id + 1}>{dataset[el].notes}</li>
+                                </div>
+                            </section>
+                        </>
+                    ))}</ul>
+
+                    {/*365 dni; do 366dni*/}
+                    <ul>{OneYear.map((el, index) => (
+                        <>
+                            <section className={"notes-all year"}>
+                                <div className={"notes-time"}>
+                                    <li key={dataset[index].id + 2}>{dataset[el].hour}</li>
+                                </div>
+                                <div className={"notes-description"}>
+                                    <li key={dataset[index].id}>{dataset[el].description}</li>
+                                </div>
+                                <div className={"notes-content"}>
+                                    <li key={dataset[index].id + 1}>{dataset[el].notes}</li>
+                                </div>
+                            </section>
+                        </>
+                    ))}</ul>
+                </div>
             </div>
         </>
     )

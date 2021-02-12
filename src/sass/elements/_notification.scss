@@ -1,0 +1,36 @@
+.notifications-container{
+  width: 80%;
+
+  h1{
+    font-family: $font-open-sans;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+  .tenMinutes{
+    background-color: #f5b5b5;
+    border: none;
+  }
+  .twoDays{
+    background-color: #cef3ce;
+    border: none;
+  }
+  .week{
+    background-color: #aec4f1;
+    border: none;
+  }
+  .month{
+    background-color: #cebbef;
+    border: none;
+  }
+  .year{
+    background-color: #ffd89c;
+    border: none;
+  }
+}
+
+//border none dla   .notes-all{
+//    border: 1px solid #78d1e2; //_notes.scss
