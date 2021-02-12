@@ -143,6 +143,7 @@ export const Notifications = ({tim, dataset, tenMin, twoDay, OneWeek, OneMonth, 
             {/*10 min; do 1 dzień*/}
             <ul style={{color: "red"}}>{tenMin.map((el, index)=> (
                 <>
+                    <li key={dataset[index].id + 2}>{dataset[el].hour}</li>
                     <li key={dataset[index].id}>{dataset[el].description}</li>
                     <li key={dataset[index].id + 1}>{dataset[el].notes}</li>
                 </>
@@ -151,6 +152,7 @@ export const Notifications = ({tim, dataset, tenMin, twoDay, OneWeek, OneMonth, 
             {/*2 dni; do 3 dni*/}
             <ul style={{color: "green"}}>{twoDay.map((el, index) => (
                 <>
+                    <li key={dataset[index].id + 2}>{dataset[el].hour}</li>
                     <li key={dataset[index].id}>{dataset[el].description}</li>
                     <li key={dataset[index].id + 1}>{dataset[el].notes}</li>
                 </>
@@ -159,6 +161,7 @@ export const Notifications = ({tim, dataset, tenMin, twoDay, OneWeek, OneMonth, 
             {/*7 dni; do 8 dni*/}
             <ul style={{color: "blue"}}>{OneWeek.map((el, index) => (
                 <>
+                    <li key={dataset[index].id + 2}>{dataset[el].hour}</li>
                     <li key={dataset[index].id}>{dataset[el].description}</li>
                     <li key={dataset[index].id + 1}>{dataset[el].notes}</li>
                 </>
@@ -167,6 +170,7 @@ export const Notifications = ({tim, dataset, tenMin, twoDay, OneWeek, OneMonth, 
             {/*30 dni; do 31dni*/}
             <ul style={{color: "purple"}}>{OneMonth.map((el, index) => (
                 <>
+                    <li key={dataset[index].id + 2}>{dataset[el].hour}</li>
                     <li key={dataset[index].id}>{dataset[el].description}</li>
                     <li key={dataset[index].id + 1}>{dataset[el].notes}</li>
                 </>
@@ -175,6 +179,7 @@ export const Notifications = ({tim, dataset, tenMin, twoDay, OneWeek, OneMonth, 
             {/*365 dni; do 366dni*/}
             <ul style={{color: "orange"}}>{OneYear.map((el, index) => (
                 <>
+                    <li key={dataset[index].id + 2}>{dataset[el].hour}</li>
                     <li key={dataset[index].id}>{dataset[el].description}</li>
                     <li key={dataset[index].id + 1}>{dataset[el].notes}</li>
                 </>
