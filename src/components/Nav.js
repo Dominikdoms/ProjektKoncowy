@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Moment from "react-moment";//formatowanie dat
 import 'moment-timezone'//ustawia strefy czasowe
+import moment from 'moment'
 
 //-----------------------
 //---------HOME----------
@@ -19,7 +20,7 @@ export const Notes = ({tim}) => {
     const [notes, setNotes] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/notes')
+        fetch('http://localhost:3000/notes?_sort=id&_order=desc')
             .then(r => r.json())
             .then(data => {
                 setNotes(data)
@@ -41,7 +42,7 @@ export const Notes = ({tim}) => {
             <div className={"notes-container container"}>
                 <h1>Wszystkie Notatki</h1>
                 <ul>{notes.map(notes => (
-                    <>
+
                         <section className={"notes-all"}>
 
                             <div className={"notes-time"}>
@@ -60,7 +61,7 @@ export const Notes = ({tim}) => {
                             <button className={"notes-btn"} key={notes.id} onClick={() => deleteNotes(notes.id)}>Usuń
                             </button>
                         </section>
-                    </>
+
                 ))}</ul>
             </div>
         </>
@@ -91,7 +92,7 @@ export const AddNot = ({onAddDate}, {tim}) => {
             const newNotes = {
                 description,
                 notes,
-                hour: new Date(),//.toLocaleTimeString(),
+                hour: moment().format('MMMM Do YYYY, h:mm:ss a'), //new Date(),//.toLocaleTimeString(),
                 time: new Date().getTime()
             }
 
@@ -128,8 +129,8 @@ export const AddNot = ({onAddDate}, {tim}) => {
                 <label>
                     <p>Notatka:</p>
                     <textarea name="notes"
-                              cols="30"
-                              rows="10"
+                              // cols="30"
+                              // rows="10"
                               value={notes}
                               onChange={e => setNotes(e.target.value)}/>
                 </label>

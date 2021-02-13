@@ -40,7 +40,7 @@ const App = () => {
     }, [])
 
     const AddDate = (data) => {
-        setDataset(prevState => [...prevState, data])
+        setDataset(prevState => [data, ...prevState])
     }
 
     useEffect(() => {
