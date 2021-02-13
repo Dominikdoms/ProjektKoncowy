@@ -1,4 +1,9 @@
-
+//
+//@mixin desktop {
+//  @media (min-width: 1354px) {
+//    @content;
+//  }
+//}
 @mixin desktop {
   @media (min-width: 1354px) {
     @content;

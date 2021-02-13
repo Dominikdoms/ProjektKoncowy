@@ -1,13 +1,21 @@
+//Settings-Variables
 @import "settings/colors";
 @import "settings/fonts";
 @import "settings/variables";
 @import "settings/commons";
+@import "settings/mixins";
+
+//elements
 @import "elements/nav";
 @import "elements/content";
 @import "elements/notes";
-@import "generic/reset";
 @import "settings/mixins";
 @import "elements/notification";
+@import "elements/common";
+@import "elements/footer";
+
+//generic
+@import "generic/reset";
 
 
 
