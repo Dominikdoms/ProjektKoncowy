@@ -174,7 +174,7 @@ const App = () => {
                         <div className={"menu__list"}>
                             <ul>
                                 <li className={"nav-element"}>
-                                    <Link to={"/home"}>Strona główna</Link>
+                                    <Link to={"/"}>Strona główna</Link>
                                 </li>
                                 <li className={"nav-element"}>
                                     <Link to={"/notes"}>Wszystkie notatki</Link>
@@ -194,7 +194,7 @@ const App = () => {
 
 
                 <Switch>
-                    <Route exact path={"/home"}>
+                    <Route exact path={"/"}>
                         <Home tim={"Strona główna"}/>
                     </Route>
 

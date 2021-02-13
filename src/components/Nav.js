@@ -39,7 +39,7 @@ export const Notes = ({tim}) => {
     return (
         <>
             <div className={"notes-container container"}>
-                <h1>Wszystkie Notatki</h1>
+                <h1>Wszystkie Notatki: {notes.length}</h1>
                 <ul>{notes.map(notes => (
                     <>
                         <section className={"notes-all"}>
