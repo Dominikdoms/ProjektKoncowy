@@ -1,16 +1,45 @@
-.footer{
+.footer {
   background-color: #ecedf0;
   height: 100px;
   width: 100vw;
   margin-top: 50px;
-  box-shadow: 0 -5px 40px rgba(0,0,0,0.16);
+  box-shadow: 0 -5px 40px rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+  //position: relative;
 
-  .footer-container{
+  .footer-container {
     display: flex;
     justify-content: space-between;
   }
-  .footer-logo{
 
+  .footer-logo-header{
+    font-size: 26px;
+    color: $nav-blue;
+    font-family: $font-raleway;
+    margin-bottom: 5px;
+  }
+
+  .footer-social-media {
+    position: relative;
+    top: 7px;
+
+    .facebook {
+      font-size: 25px;
+      margin-right: 20px;
+      color: #3b5998;
+    }
+
+    .twitter {
+      font-size: 25px;
+      color: #1DA1F2;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+      outline: none;
+    }
   }
 }
 

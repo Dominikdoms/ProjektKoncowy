@@ -119,11 +119,12 @@ nav {
     font-weight: 700;
 
     @include desktop {
+      width: unset;
       background-color: unset;
       height: 0;
       box-shadow: unset;
       position: absolute;
-      right: -17px;
+      right: 15px;
       top: 4px;
       z-index: 1;
       width: 50%;
@@ -132,6 +133,7 @@ nav {
 
         a{
           color: #d4d6d6;
+          outline: none;
         }
       }
 

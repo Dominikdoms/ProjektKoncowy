@@ -123,12 +123,14 @@ export const AddNot = ({onAddDate}, {tim}) => {
 
             <form onSubmit={handleSubmit}>
                 <p>Opis:</p>
-                <input type="text"
+                <input className={"input-description"}
+                    type="text"
                        value={description}
                        onChange={e => setDescription(e.target.value)}/>
                 <label>
                     <p>Notatka:</p>
-                    <textarea name="notes"
+                    <textarea className={"textarea-content"}
+                        name="notes"
                               // cols="30"
                               // rows="10"
                               value={notes}

@@ -17,8 +17,12 @@ export const Footer = () => {
                         facebook</p>
                 </div>
                 <div className={"footer-social-media"}>
-                    <FontAwesomeIcon className={"facebook"} icon={['fab', 'facebook-f']}/>
-                    <FontAwesomeIcon icon={['fab', 'twitter']}/>
+                    <a href="https://www.facebook.com/dominik.rolewski.3/" target={"_blank"}>
+                        <FontAwesomeIcon className={"facebook"} icon={['fab', 'facebook-f']}/>
+                    </a>
+                    <a href="https://twitter.com/DominikRolewski" target={"_blank"}>
+                        <FontAwesomeIcon className={"twitter"} icon={['fab', 'twitter']}/>
+                    </a>
                 </div>
             </section>
         </footer>
