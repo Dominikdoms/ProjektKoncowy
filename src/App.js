@@ -80,49 +80,49 @@ const App = () => {
             //-------------------------------
             //-----TESTOWANIE NOTATNOKA------
             //-------------------------------
-            // // od 5s: 5000;     do 10s 10000 ms;
-            // if ((dataset[i].time + 5000) < currentTime && (dataset[i].time + 10000) > currentTime) {
-            //     indexTenMin.push(i)
-            // }
-            // // od 15s: 15000 ms;     do 20s: 20000 ms;
-            // if ((dataset[i].time + 15000) < currentTime && (dataset[i].time + 20000) > currentTime) {
-            //     indexTwoDay.push(i)
-            // }
-            // // od 25s: 25000 ms;   do 30s 30000 ms;
-            // if ((dataset[i].time + 25000) < currentTime && (dataset[i].time + 30000) > currentTime) {
-            //     indexOneWeek.push(i)
-            // }
-            // // od 35s: 35000 ms;     do 40s: 40000 ms;
-            // if ((dataset[i].time + 35000) < currentTime && (dataset[i].time + 40000) > currentTime) {
-            //     indexOneMonth.push(i)
-            // }
-            // // od 45s: 45000 ms;      do 50s: 50000 ms;
-            // if ((dataset[i].time + 45000) < currentTime && (dataset[i].time + 50000) > currentTime) {
-            //     indexOneYear.push(i)
-            // }
+            // od 5s: 5000;     do 10s 10000 ms;
+            if ((dataset[i].time + 5000) < currentTime && (dataset[i].time + 10000) > currentTime) {
+                indexTenMin.push(i)
+            }
+            // od 15s: 15000 ms;     do 20s: 20000 ms;
+            if ((dataset[i].time + 15000) < currentTime && (dataset[i].time + 20000) > currentTime) {
+                indexTwoDay.push(i)
+            }
+            // od 25s: 25000 ms;   do 30s 30000 ms;
+            if ((dataset[i].time + 25000) < currentTime && (dataset[i].time + 30000) > currentTime) {
+                indexOneWeek.push(i)
+            }
+            // od 35s: 35000 ms;     do 40s: 40000 ms;
+            if ((dataset[i].time + 35000) < currentTime && (dataset[i].time + 40000) > currentTime) {
+                indexOneMonth.push(i)
+            }
+            // od 45s: 45000 ms;      do 50s: 50000 ms;
+            if ((dataset[i].time + 45000) < currentTime && (dataset[i].time + 50000) > currentTime) {
+                indexOneYear.push(i)
+            }
             //-------------------------------------------
             //---------------STOP TEST-------------------
             //-------------------------------------------
             // od 5s: 5000;     do 10s 10000 ms;
-            if ((dataset[i].time + 5000) < currentTime && (dataset[i].time + 10000000) > currentTime) {
-                indexTenMin.push(i)
-            }
-            // od 15s: 15000 ms;     do 20s: 20000 ms;
-            if ((dataset[i].time + 5000) < currentTime && (dataset[i].time + 10000000) > currentTime) {
-                indexTwoDay.push(i)
-            }
-            // od 25s: 25000 ms;   do 30s 30000 ms;
-            if ((dataset[i].time + 5000) < currentTime && (dataset[i].time + 10000000) > currentTime) {
-                indexOneWeek.push(i)
-            }
-            // od 35s: 35000 ms;     do 40s: 40000 ms;
-            if ((dataset[i].time + 5000) < currentTime && (dataset[i].time + 10000000) > currentTime) {
-                indexOneMonth.push(i)
-            }
-            // od 45s: 45000 ms;      do 50s: 50000 ms;
-            if ((dataset[i].time + 5000) < currentTime && (dataset[i].time + 10000000) > currentTime) {
-                indexOneYear.push(i)
-            }
+            // if ((dataset[i].time + 5000) < currentTime && (dataset[i].time + 10000000) > currentTime) {
+            //     indexTenMin.push(i)
+            // }
+            // // od 15s: 15000 ms;     do 20s: 20000 ms;
+            // if ((dataset[i].time + 5000) < currentTime && (dataset[i].time + 10000000) > currentTime) {
+            //     indexTwoDay.push(i)
+            // }
+            // // od 25s: 25000 ms;   do 30s 30000 ms;
+            // if ((dataset[i].time + 5000) < currentTime && (dataset[i].time + 10000000) > currentTime) {
+            //     indexOneWeek.push(i)
+            // }
+            // // od 35s: 35000 ms;     do 40s: 40000 ms;
+            // if ((dataset[i].time + 5000) < currentTime && (dataset[i].time + 10000000) > currentTime) {
+            //     indexOneMonth.push(i)
+            // }
+            // // od 45s: 45000 ms;      do 50s: 50000 ms;
+            // if ((dataset[i].time + 5000) < currentTime && (dataset[i].time + 10000000) > currentTime) {
+            //     indexOneYear.push(i)
+            // }
             //-------------------------------------------
         }
         //przypisywanie wartości tablic do state

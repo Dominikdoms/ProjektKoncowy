@@ -1,0 +1,151 @@
+.about-container {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  .about-openSection {
+    padding: 25px;
+    max-width: 634px;
+    font-size: 30px;
+    text-align: center;
+    font-family: $font-Lato;
+
+    a{
+      text-decoration: none;
+      color: #7b9fe8;
+    }
+    span{
+      text-decoration: underline;
+    }
+  }
+
+  .about-breakPoints {
+    padding: 30px;
+  }
+
+  .breakPoint {
+    height: 50px;
+    width: 78px;
+    border-radius: 4px;
+    padding: 5px;
+    color: white;
+    background-color: #7b9fe8;
+    text-align: center;
+  }
+
+  .about-tenMinutes {
+    width: 100px;
+    height: 74px;
+    background-color: $color-tenMinutes;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.26);
+  }
+
+  .about-breakPoints {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .about-twoDays {
+      width: 100px;
+      height: 74px;
+      background-color: $color-twoDays;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.26);
+    }
+
+    .about-week {
+      width: 100px;
+      height: 74px;
+      background-color: $color-week;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.26);
+    }
+
+    .about-month {
+      width: 100px;
+      height: 74px;
+      background-color: $color-month;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.26);
+    }
+
+    .about-year {
+      width: 100px;
+      height: 74px;
+      background-color: $color-year;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.26);
+    }
+  }
+
+  .about-text{
+    padding: 25px;
+    max-width: 800px;
+    font-size: 20px;
+    text-align: center;
+    font-family: $font-raleway;
+  }
+
+
+  .about-pictures {
+    margin: 30px;
+    @media (min-width: 900px) {
+      display: flex;
+      justify-content: center;
+    }
+    .learnCurve {
+      .learnCurve-img{
+        width: 100%;
+        border: 3px solid #bccc6c;
+        margin-bottom: 20px;
+      }
+      //width: 100%;
+
+      margin-bottom: 20px;
+      @media (min-width: 900px) {
+        width: 45%;
+        margin: 10px;
+      }
+    }
+
+    .forgetCurve1 {
+      .forgetCurve1-img{
+        width: 100%;
+        border: 3px solid #adb3bf;
+      }
+      //width: 100%;
+
+      @media (min-width: 900px) {
+        width: 45%;
+        margin: 10px;
+        :hover {
+          background-color: black;
+        }
+      }
+    }
+  }
+
+}
