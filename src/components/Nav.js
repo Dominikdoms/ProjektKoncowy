@@ -111,28 +111,31 @@ export const AddNot = ({onAddDate}, {tim}) => {
 
 
     return (
-        <>
-            <h1>{tim}</h1>
+            <section className={"addNot-container container"}>
+                <div className={"addNot"}>
+            <h1>DODAJ NOTATKĘ</h1>
 
             <form onSubmit={handleSubmit}>
-                <p>Opis:</p>
                 <input className={"input-description"}
                     type="text"
+                       placeholder={"Opis"}
                        value={description}
                        onChange={e => setDescription(e.target.value)}/>
                 <label>
-                    <p>Notatka:</p>
                     <textarea className={"textarea-content"}
                         name="notes"
+                              placeholder={"Notatka"}
                               // cols="30"
                               // rows="10"
                               value={notes}
                               onChange={e => setNotes(e.target.value)}/>
                 </label>
-                <p style={{color: "red"}}>{error}</p>
-                <button>Add Notes</button>
+
+                <p className={"error"}>{error}</p>
+                <button className={"btn"}>Add Notes</button>
             </form>
-        </>
+                </div>
+            </section>
     )
 }
 
