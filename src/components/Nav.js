@@ -3,14 +3,7 @@ import Moment from "react-moment";//formatowanie dat
 import 'moment-timezone'//ustawia strefy czasowe
 import moment from 'moment'
 
-//-----------------------
-//---------HOME----------
-//-----------------------
-export const Home = ({tim}) => {
-    return (
-        <h1>{tim}</h1>
-    )
-}
+
 
 //-------------------------------
 //----------SHOW NOTES-----------

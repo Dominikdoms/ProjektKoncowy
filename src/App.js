@@ -10,7 +10,8 @@ import {
     Switch,
     NavLink,
 } from 'react-router-dom';
-import {Home, Notes, AddNot, Notifications} from './components/Nav'
+import {Notes, AddNot, Notifications} from './components/Nav'
+import {Home} from "./components/about";
 import {Footer} from "./components/footer";
 
 
@@ -178,7 +179,7 @@ const App = () => {
                         <div className={"menu__list"}>
                             <ul>
                                 <li className={"nav-element"}>
-                                    <Link to={"/home"}>Strona główna</Link>
+                                    <Link to={"/home"}>Aplikacja</Link>
                                 </li>
                                 <li className={"nav-element"}>
                                     <Link to={"/notes"}>Wszystkie notatki</Link>
@@ -199,9 +200,9 @@ const App = () => {
 
 
                 <Switch>
-                    <main className={"content"}>
+                    <div className={"content"}>
                     <Route exact path={"/home"}>
-                        <Home tim={"Strona główna"}/>
+                        <Home />
                     </Route>
 
                     <Route exact path={"/notes"}>
@@ -225,7 +226,7 @@ const App = () => {
 
                             tim={"Powtórka"}/>
                     </Route>
-                    </main>
+                    </div>
                 </Switch>
             </HashRouter>
             <Footer/>

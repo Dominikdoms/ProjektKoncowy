@@ -1,6 +1,7 @@
-.notes-container{
+.notes-container {
   width: 80%;
-  h1{
+
+  h1 {
     font-family: $font-raleway;
     //text-transform: uppercase;
     margin-top: 20px;
@@ -10,7 +11,8 @@
     font-weight: 400;
     //color: ;
   }
-  .notes-all{
+
+  .notes-all {
     border: 1px solid #78d1e2;
     border-radius: 15px;
     padding: 10px;
@@ -19,21 +21,25 @@
     box-shadow: 0 0 10px #cfd6ec;
     background-color: white;
   }
-  .notes-time{
+
+  .notes-time {
     color: #9aa0ac;
     font-family: $font-Lato;
   }
-  .notes-description{
+
+  .notes-description {
     color: #a0556d;
     font-family: $font-raleway;
     margin-top: 5px;
     margin-bottom: 10px;
   }
-  .notes-content{
+
+  .notes-content {
     color: #3d3f44;
     font-family: $font-open-sans;
   }
-  .notes-btn{
+
+  .notes-btn {
     background-color: #97b3ed;
     border: 1px solid #97b3ed;
     border-radius: 15px;
