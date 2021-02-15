@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ProjektKoncowy/static/css/main.67160965.chunk.css",
+    "main.js": "/ProjektKoncowy/static/js/main.23c6a909.chunk.js",
+    "main.js.map": "/ProjektKoncowy/static/js/main.23c6a909.chunk.js.map",
+    "runtime-main.js": "/ProjektKoncowy/static/js/runtime-main.59f08316.js",
+    "runtime-main.js.map": "/ProjektKoncowy/static/js/runtime-main.59f08316.js.map",
+    "static/js/2.0ebabc0d.chunk.js": "/ProjektKoncowy/static/js/2.0ebabc0d.chunk.js",
+    "static/js/2.0ebabc0d.chunk.js.map": "/ProjektKoncowy/static/js/2.0ebabc0d.chunk.js.map",
+    "static/js/3.d8469f68.chunk.js": "/ProjektKoncowy/static/js/3.d8469f68.chunk.js",
+    "static/js/3.d8469f68.chunk.js.map": "/ProjektKoncowy/static/js/3.d8469f68.chunk.js.map",
+    "index.html": "/ProjektKoncowy/index.html",
+    "static/css/main.67160965.chunk.css.map": "/ProjektKoncowy/static/css/main.67160965.chunk.css.map",
+    "static/js/2.0ebabc0d.chunk.js.LICENSE.txt": "/ProjektKoncowy/static/js/2.0ebabc0d.chunk.js.LICENSE.txt",
+    "static/media/kz1.6c97c9c9.jpeg": "/ProjektKoncowy/static/media/kz1.6c97c9c9.jpeg",
+    "static/media/kz2.5b64ac36.jpg": "/ProjektKoncowy/static/media/kz2.5b64ac36.jpg",
+    "static/media/kz3.f3f1832a.jpeg": "/ProjektKoncowy/static/media/kz3.f3f1832a.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.59f08316.js",
+    "static/js/2.0ebabc0d.chunk.js",
+    "static/css/main.67160965.chunk.css",
+    "static/js/main.23c6a909.chunk.js"
+  ]
+}
