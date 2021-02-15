@@ -57,49 +57,49 @@ const App = () => {
             //-------------------------------------
             //------------PEŁNA WERSJA-------------
             //-------------------------------------
-            // od 10min: 600000;     do 1 dzień: 86400000 ms;
-            if ((dataset[i].time + 600000) < currentTime && (dataset[i].time+ 86400000) > currentTime) {
-                indexTenMin.push(i)
-            }
-            // od 2dni: 172800000 ms;  do 3dni: 259200000 ms;
-            if ((dataset[i].time + 172800000) < currentTime && (dataset[i].time+ 259200000) > currentTime) {
-                indexTwoDay.push(i)
-            }
-            // od 7dni: 604800000 ms;   do 8dni: 691200000 ms;
-            if ((dataset[i].time + 604800000) < currentTime && (dataset[i].time+ 691200000) > currentTime) {
-                indexOneWeek.push(i)
-            }
-            //od 30 dni: 2592000000 ms;   do 32dni: 2678400000 ms;
-            if ((dataset[i].time + 2592000000) < currentTime && (dataset[i].time+ 2678400000) > currentTime) {
-                indexOneMonth.push(i)
-            }
-            //od 365 dni: 31536000000 ms;   do 366dmi: 31622400000 ms;
-            if ((dataset[i].time + 31536000000) < currentTime && (dataset[i].time+ 31622400000) > currentTime) {
-                indexOneYear.push(i)
-            }
+            // // od 10min: 600000;     do 1 dzień: 86400000 ms;
+            // if ((dataset[i].time + 600000) < currentTime && (dataset[i].time+ 86400000) > currentTime) {
+            //     indexTenMin.push(i)
+            // }
+            // // od 2dni: 172800000 ms;  do 3dni: 259200000 ms;
+            // if ((dataset[i].time + 172800000) < currentTime && (dataset[i].time+ 259200000) > currentTime) {
+            //     indexTwoDay.push(i)
+            // }
+            // // od 7dni: 604800000 ms;   do 8dni: 691200000 ms;
+            // if ((dataset[i].time + 604800000) < currentTime && (dataset[i].time+ 691200000) > currentTime) {
+            //     indexOneWeek.push(i)
+            // }
+            // //od 30 dni: 2592000000 ms;   do 32dni: 2678400000 ms;
+            // if ((dataset[i].time + 2592000000) < currentTime && (dataset[i].time+ 2678400000) > currentTime) {
+            //     indexOneMonth.push(i)
+            // }
+            // //od 365 dni: 31536000000 ms;   do 366dmi: 31622400000 ms;
+            // if ((dataset[i].time + 31536000000) < currentTime && (dataset[i].time+ 31622400000) > currentTime) {
+            //     indexOneYear.push(i)
+            // }
             //-------------------------------
             //-----TESTOWANIE NOTATNOKA------
             //-------------------------------
-            // // od 5s: 5000;     do 10s 10000 ms;
-            // if ((dataset[i].time + 5000) < currentTime && (dataset[i].time + 10000) > currentTime) {
-            //     indexTenMin.push(i)
-            // }
-            // // od 15s: 15000 ms;     do 20s: 20000 ms;
-            // if ((dataset[i].time + 15000) < currentTime && (dataset[i].time + 20000) > currentTime) {
-            //     indexTwoDay.push(i)
-            // }
-            // // od 25s: 25000 ms;   do 30s 30000 ms;
-            // if ((dataset[i].time + 25000) < currentTime && (dataset[i].time + 30000) > currentTime) {
-            //     indexOneWeek.push(i)
-            // }
-            // // od 35s: 35000 ms;     do 40s: 40000 ms;
-            // if ((dataset[i].time + 35000) < currentTime && (dataset[i].time + 40000) > currentTime) {
-            //     indexOneMonth.push(i)
-            // }
-            // // od 45s: 45000 ms;      do 50s: 50000 ms;
-            // if ((dataset[i].time + 45000) < currentTime && (dataset[i].time + 50000) > currentTime) {
-            //     indexOneYear.push(i)
-            // }
+            // od 5s: 5000;     do 10s 10000 ms;
+            if ((dataset[i].time + 5000) < currentTime && (dataset[i].time + 10000) > currentTime) {
+                indexTenMin.push(i)
+            }
+            // od 15s: 15000 ms;     do 20s: 20000 ms;
+            if ((dataset[i].time + 15000) < currentTime && (dataset[i].time + 20000) > currentTime) {
+                indexTwoDay.push(i)
+            }
+            // od 25s: 25000 ms;   do 30s 30000 ms;
+            if ((dataset[i].time + 25000) < currentTime && (dataset[i].time + 30000) > currentTime) {
+                indexOneWeek.push(i)
+            }
+            // od 35s: 35000 ms;     do 40s: 40000 ms;
+            if ((dataset[i].time + 35000) < currentTime && (dataset[i].time + 40000) > currentTime) {
+                indexOneMonth.push(i)
+            }
+            // od 45s: 45000 ms;      do 50s: 50000 ms;
+            if ((dataset[i].time + 45000) < currentTime && (dataset[i].time + 50000) > currentTime) {
+                indexOneYear.push(i)
+            }
         }
         //przypisywanie wartości tablic do state
         setIndexesTenMin(indexTenMin);
@@ -118,9 +118,18 @@ const App = () => {
         e.preventDefault();
         setShowMenu(!showMenu);
     }
+
+
+    const checkMobile = () =>{
+        const query = window.matchMedia("(min-width:1354px)");
+        setIsMobile(!query.matches);
+        setShowMenu(query.matches);
+        return query;
+    }
+
     useEffect(() => {
         // const query = window.matchMedia("(min-width:720px)");
-        const query = window.matchMedia("(min-width:1354px)");
+        const query = checkMobile();
         query.addListener((e) => {
             setIsMobile(!e.matches);
             setShowMenu(e.matches);
