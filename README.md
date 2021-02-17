@@ -1,5 +1,5 @@
 # My first project in React. Preview:
-```https://dominikdoms.github.io/ProjektKoncowy/#/home```
+https://dominikdoms.github.io/ProjektKoncowy/#/home
 
 > Notes for students who want to remember everything they learned. Created based on the forgetting curve
 
