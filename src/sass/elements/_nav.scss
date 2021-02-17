@@ -9,12 +9,14 @@
   top: 0;
   width: 100vw;
   height: 80px;
+  @media (max-width: 425px) {
+    margin-bottom: 50px;
+  }
   background-color: $nav-blue;
   @include desktop {
     box-shadow: -1px 6px 6px rgba(0, 0, 0, 0.26);
   }
 }
-
 
 .header-notifications {
   background-color: $nav-blue;
@@ -36,7 +38,12 @@
     display: flex;
     width: 85%;
     @include desktop {
-      width: 50%;
+      @media (max-width: 1593px) {
+        width: 55%;
+        @media (max-width: 1116px) {
+          width: 40%;
+        }
+      }
       justify-content: unset;
     }
 
@@ -47,7 +54,6 @@
     }
     align-items: center;
   }
-
 
   .tenMinutes {
     width: 177px;
@@ -144,18 +150,18 @@ nav {
     }
 
     @include desktop {
+      box-shadow: unset;
       width: unset;
       background-color: unset;
-      height: 0;
-      box-shadow: unset;
-      position: absolute;
-      right: 15px;
-      top: 4px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      right: 34px;
+      top: 0;
       z-index: 1;
-      width: 50%;
+      width: auto;
       ul {
         display: flex;
-
         a {
           color: #d4d6d6;
           outline: none;
@@ -163,7 +169,6 @@ nav {
       }
 
     }
-
 
     a {
       color: $nav-list-a;
@@ -173,12 +178,6 @@ nav {
       &:hover, &:checked {
         color: $nav-list-a;
       }
-    }
-
-    ul {
-      position: relative;
-      left: 15px;
-      top: 17px;
     }
 
     li {

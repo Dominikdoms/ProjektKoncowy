@@ -5,7 +5,12 @@
 //  }
 //}
 @mixin desktop {
-  @media (min-width: 1354px) {
+  @media (min-width: 938px) {
     @content;
   }
 }
+//@mixin desktop {
+//  @media (min-width: 1354px) {
+//    @content;
+//  }
+//}

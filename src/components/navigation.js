@@ -36,7 +36,7 @@ export const Navigation = ({
     const checkMobile = () => {
         //sprawsza wielkość ekranu i zwraca obiekt,
         //w którym jest klucz matches wskazujący na true lub false
-        const query = window.matchMedia("(min-width:1354px)");
+        const query = window.matchMedia("(min-width:938px)");
         //query.matches -odczutuje wartość klucza matches w obiekcie query
 
         //jeśli wartość matches = true, ustawia stan (isMobile) na false,
