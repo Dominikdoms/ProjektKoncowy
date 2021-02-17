@@ -20,4 +20,4 @@ https://dominikdoms.github.io/ProjektKoncowy/#/home
 2. ```  cd my-app ```
 3. ``` npm i ```
 4. ``` json-server db.json --watch ```
-5. open two terminal: ``` npm start ```
+5. open second terminal: ``` npm start ```
