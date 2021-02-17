@@ -1,4 +1,4 @@
-.container{
+.container {
   max-width: 1352px;
   margin: 0 auto;
   width: 100vw;
@@ -8,7 +8,7 @@
   position: sticky;
   top: 0;
   width: 100vw;
-  height: 70px;
+  height: 80px;
   background-color: $nav-blue;
   @include desktop {
     box-shadow: -1px 6px 6px rgba(0, 0, 0, 0.26);
@@ -19,7 +19,10 @@
 .header-notifications {
   background-color: $nav-blue;
   width: 100%;
-  height: 70px;
+  height: 80px;
+  @media (max-width: 425px) {
+    height: 120px;
+  }
   box-shadow: -1px 6px 6px rgba(0, 0, 0, 0.26);
   @include desktop {
     box-shadow: unset;
@@ -28,6 +31,22 @@
   font-family: $font-raleway;
   color: white;
   font-family: $font-Lato;
+
+  .notifications {
+    display: flex;
+    width: 85%;
+    @include desktop {
+      width: 50%;
+      justify-content: unset;
+    }
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media (max-width: 852px) {
+      justify-content: unset;
+    }
+    align-items: center;
+  }
 
 
   .tenMinutes {
@@ -98,7 +117,10 @@ nav {
     margin-right: 28px;
     position: absolute;
     right: -4px;
-    top: 21px;
+    top: 26px;
+    @media (max-width: 425px) {
+      top: 46px;
+    }
 
     span {
       display: block;
@@ -110,13 +132,16 @@ nav {
   }
 
   .menu__list {
-    box-shadow: -1px 6px 6px rgba(0, 0, 0, 0.26),-1px 6px 6px rgba(0, 0, 0, 0.26) inset;
+    box-shadow: -1px 6px 6px rgba(0, 0, 0, 0.26), -1px 6px 6px rgba(0, 0, 0, 0.26) inset;
     background-color: $nav-list;
     height: 171px;
     position: absolute;
     width: 100%;
-    top: 67px;
+    top: 80px;
     font-weight: 700;
+    @media (max-width: 425px) {
+      top: 120px;
+    }
 
     @include desktop {
       width: unset;
@@ -128,10 +153,10 @@ nav {
       top: 4px;
       z-index: 1;
       width: 50%;
-      ul{
+      ul {
         display: flex;
 
-        a{
+        a {
           color: #d4d6d6;
           outline: none;
         }
@@ -153,7 +178,7 @@ nav {
     ul {
       position: relative;
       left: 15px;
-      top: 12px;
+      top: 17px;
     }
 
     li {
