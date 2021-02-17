@@ -11,7 +11,7 @@ https://dominikdoms.github.io/ProjektKoncowy/#/home
     <li>SASS</li>
     <li>JSON-server</li>
     <li>RWD</li>
-    <li>routing (React Router)</li>
+    <li>React Router</li>
     <li>Fetch</li>
 </ul>
 
