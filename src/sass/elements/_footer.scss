@@ -39,11 +39,21 @@
       font-size: 25px;
       margin-right: 20px;
       color: #3b5998;
+      transition: 0.2s;
+      &:hover{
+        color: #3b5998;
+        transform: scale(1.4);
+      }
     }
 
     .twitter {
       font-size: 25px;
       color: #1DA1F2;
+      transition: 0.2s;
+      &:hover{
+        color: #2fa7ef;
+        transform: scale(1.4);
+      }
     }
 
     a {

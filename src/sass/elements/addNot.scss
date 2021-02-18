@@ -37,6 +37,11 @@
         background-color: $nav-blue;
         color: white;
         font-family: $font-open-sans;
+        transition: 0.5s;
+        &:hover{
+          background-color: #6c92ef;
+          box-shadow: 0 0 6px rgba(0,0,0,0.26);
+        }
       }
     }
   }

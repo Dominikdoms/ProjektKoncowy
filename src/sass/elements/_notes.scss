@@ -20,6 +20,9 @@
     margin-bottom: 20px;
     box-shadow: 0 0 10px #cfd6ec;
     background-color: white;
+    &:hover{
+      box-shadow: 1px 2px 15px #abb1bf;
+    }
   }
 
   .notes-time {
@@ -42,9 +45,14 @@
   .notes-btn {
     background-color: #97b3ed;
     border: 1px solid #97b3ed;
+    //border: none;
     border-radius: 15px;
     padding: 5px 15px;
     margin-top: 10px;
     color: white;
+    transition: 0.5s;
+    &:hover{
+      background-color: #6c92ef;
+    }
   }
 }

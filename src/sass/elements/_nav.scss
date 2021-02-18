@@ -4,9 +4,18 @@
   width: 100vw;
 }
 
+.header__container{
+  @include desktop {
+    display: flex;
+  }
+}
+
+
+
 .header {
   position: sticky;
   top: 0;
+  z-index: 1;
   width: 100vw;
   height: 80px;
   @media (max-width: 425px) {
@@ -17,6 +26,7 @@
     box-shadow: -1px 6px 6px rgba(0, 0, 0, 0.26);
   }
 }
+
 
 .header-notifications {
   background-color: $nav-blue;
@@ -36,14 +46,11 @@
 
   .notifications {
     display: flex;
+    @include desktop{
+      width: unset;
+    }
     width: 85%;
     @include desktop {
-      @media (max-width: 1593px) {
-        width: 55%;
-        @media (max-width: 1116px) {
-          width: 40%;
-        }
-      }
       justify-content: unset;
     }
 
@@ -65,6 +72,10 @@
     justify-content: center;
     margin: 2px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.26);
+    transition: 0.2s;
+    &:hover{
+      transform: scale(1.1);
+    }
   }
 
   .twoDays {
@@ -77,6 +88,10 @@
     justify-content: center;
     margin: 2px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.26);
+    transition: 0.2s;
+    &:hover{
+      transform: scale(1.1);
+    }
   }
 
   .week {
@@ -89,6 +104,10 @@
     justify-content: center;
     margin: 2px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.26);
+    transition: 0.2s;
+    &:hover{
+      transform: scale(1.1);
+    }
   }
 
   .month {
@@ -101,6 +120,10 @@
     justify-content: center;
     margin: 2px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.26);
+    transition: 0.2s;
+    &:hover{
+      transform: scale(1.1);
+    }
   }
 
   .year {
@@ -113,6 +136,10 @@
     justify-content: center;
     margin: 2px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.26);
+    transition: 0.2s;
+    &:hover{
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -141,7 +168,7 @@ nav {
     box-shadow: -1px 6px 6px rgba(0, 0, 0, 0.26), -1px 6px 6px rgba(0, 0, 0, 0.26) inset;
     background-color: $nav-list;
     height: 171px;
-    position: absolute;
+    //position: absolute;
     width: 100%;
     top: 80px;
     font-weight: 700;
@@ -162,6 +189,8 @@ nav {
       width: auto;
       ul {
         display: flex;
+        width: 546px;
+        padding-right: 10px;
         a {
           color: #d4d6d6;
           outline: none;
@@ -186,6 +215,11 @@ nav {
   }
 
   ul {
+    @media (max-width: 937px) {
+      position: relative;
+      top: 13px;
+      left: 20px;
+    }
     a {
       color: black;
       text-decoration: none;
