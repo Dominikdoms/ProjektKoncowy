@@ -67,6 +67,7 @@ export const Navigation = ({
                     <div className={"header__container container"}>
                         <section className={"header-notifications"}>
                             <div className={"notifications"}>
+                                {/*liczniki w header*/}
                                 <TenMinutes indexesTenMin={indexesTenMin}/>
                                 <TwoDays indexesTwoDay={indexesTwoDay}/>
                                 <Week indexesOneWeek={indexesOneWeek}/>
@@ -102,9 +103,11 @@ export const Navigation = ({
                 </header>
                 <Switch>
                     <div className={"content"}>
+                        {/*komponenty*/}
                         <Route exact path={"/home"}><Home/></Route>
                         <Route exact path={"/notes"}><Notes/></Route>
                         <Route exact path={"/addNot"}><AddNot onAddDate={AddDate}/></Route>
+                        {/*odczytywanie notatek do powtórki*/}
                         <Route exact path={"/notifications"}><Notifications
                             dataset={dataset}
                             tenMin={indexesTenMin}

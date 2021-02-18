@@ -38,10 +38,13 @@ export const AddNot = ({onAddDate}) => {
                         "Content-Type": "application/json"
                     }
                 })
+                    //fetch w odpowiedzi zwraca promise.
                     .then((r) => r.json())
-                    .then((data) => {
+                    .then((data) => {//mamy dostęp do obiektu, który został utworzony w basie danych
                         if (typeof onAddDate === 'function') {
+                            //przekazujemy do funkcji dodany dbiekt
                             onAddDate(data)
+                            // console.log(data)
                         }
                     })
             }

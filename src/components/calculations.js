@@ -29,6 +29,7 @@ export const Calculations = () => {
         }
     }, [])
 
+    //aktualne dane z severa
     const AddDate = (data) => {
         setDataset(prevState => [data, ...prevState])
     }
