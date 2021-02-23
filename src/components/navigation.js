@@ -51,11 +51,13 @@ export const Navigation = ({
     //na starcie komponentu
     useEffect(() => {
         // const query = window.matchMedia("(min-width:720px)");
-        //przypisuje zrócony obiekt i przypusuje do query
+        //przypisuje zrócony obiekt query do zmiennej query
         const query = checkMobile();
-        //na zmiane
+        //na zmiane wartości query odpala się funksja 
         query.addListener((e) => {
+            //matches=true, nie wyęwietlaj mobile, przeciwnie: wyświetlaj
             setIsMobile(!e.matches);
+            //matches=true, wyęwietlaj menu, przeciwnie: nie wyświetlaj
             setShowMenu(e.matches);
         });
     }, [])
