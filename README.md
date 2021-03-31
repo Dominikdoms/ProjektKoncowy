@@ -7,8 +7,8 @@
 
 
 > **Opis**: Aplikacja przeznaczona dla ludzi uczących się, której celem jest rozwiązanie problemu zapominania zdobytej wiedzy.  
-> Dzięki wykorzystanej krzywej zapamiętywania z funkcją powiadamiania o N-tych powtórkach, po upływie 10min, 2 dni, tygodniu, miesiącu, roku. 
-> Urzytkownik zapamięta 100% nowego materiału.
+Dzięki wykorzystanej krzywej zapamiętywania z funkcją powiadamiania o N-tych powtórkach, po upływie 10min, 2 dni, tygodniu, miesiącu, roku. 
+Urzytkownik zapamięta 100% nowego materiału.
 
 ## ⏳ Powtórki 
 ![demo screenshot](./src/images/readMe/notifications.png)
