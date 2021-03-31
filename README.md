@@ -1,4 +1,4 @@
-# Witaj w moim notatniku! 
+# Witaj w moim magicznym notatniku! 
 
 ## 🐶 Wersja demo
 
