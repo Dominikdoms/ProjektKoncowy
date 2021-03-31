@@ -2,7 +2,7 @@
 
 ## 🐶 Wersja demo
 
-```Kliknij w link i opomagaj:``` https://dominikdoms.github.io/ProjektKoncowy/#/home
+```Kliknij w link:``` https://dominikdoms.github.io/ProjektKoncowy/#/home
 
 
 
